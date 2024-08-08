@@ -7,7 +7,7 @@ export default function HowItWorksCard({ number, title, description }) {
       <h1 className="text-[20px] text-secondary font-bold mb-[24px]">
         {title}
       </h1>
-      <p className="text-[16px] text-black opacity-70 text-center desktop1:text-left">
+      <p className="text-[16px] text-black opacity-70 text-center desktop1:text-left ">
         {description}
       </p>
     </div>
