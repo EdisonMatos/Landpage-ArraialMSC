@@ -53,8 +53,8 @@ export default function AboutInstagram() {
 
           {/* Início Botões das redes sociais */}
 
-          {/* <div className=" flex flex-col gap-[16px] w-[100%] tablet1:w-[60%] desktop1:w-[80%] desktop2:w-[60%]">
-            <MotionDivDownToUp>
+          <div className=" flex flex-col gap-[16px] w-[100%] tablet1:w-[60%] desktop1:w-[80%] desktop2:w-[60%]">
+            {/* <MotionDivDownToUp>
               <Button
                 label="Me siga no Instagram"
                 className="w-[75%]"
@@ -80,8 +80,8 @@ export default function AboutInstagram() {
                   </svg>
                 }
               />
-            </MotionDivDownToUp>
-            <MotionDivDownToUp>
+            </MotionDivDownToUp> */}
+            {/* <MotionDivDownToUp>
               <Button
                 label="Me siga no Facebook"
                 className="w-[75%]"
@@ -105,8 +105,8 @@ export default function AboutInstagram() {
                   </svg>
                 }
               />
-            </MotionDivDownToUp>
-            <MotionDivDownToUp>
+            </MotionDivDownToUp> */}
+            {/* <MotionDivDownToUp>
               <Button
                 label="Me siga no Linkedin"
                 className="w-[75%]"
@@ -132,37 +132,62 @@ export default function AboutInstagram() {
                   </svg>
                 }
               />
-            </MotionDivDownToUp>
-          </div> */}
+            </MotionDivDownToUp> */}
+          </div>
 
           {/* Fim Botões das redes sociais */}
 
           {/* Início Botão de saiba mais abrindo modal */}
 
-          <MotionDivDownToUp>
-            <Button
-              label="Siga nosso Instagram"
-              buttonLink={links.socialMedia.instagram}
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-instagram"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-              }
-            />
-          </MotionDivDownToUp>
+          <div className="flex flex-col gap-4">
+            <MotionDivDownToUp>
+              <Button
+                label="Siga nosso Instagram"
+                buttonLink={links.socialMedia.instagram}
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-instagram"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                }
+              />
+            </MotionDivDownToUp>
+
+            <MotionDivDownToUp>
+              <Button
+                label="Siga nosso Twitter"
+                buttonLink={links.socialMedia.twitter}
+                icon={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-twitter"
+                  >
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                  </svg>
+                }
+              />
+            </MotionDivDownToUp>
+          </div>
 
           {/* Fim Botão de saiba mais abrindo modal */}
         </div>
