@@ -473,7 +473,7 @@ const content = {
           stepNumber: 1,
           cardTitle: "Horários",
           cardDescription:
-            "Passeios diários com saídas das 9h e às 14h. Recomendamos chegar com pelo menos 30 minutos de antecedência.",
+            "Passeios diários com saídas das 9h às 14h. Recomendamos chegar com pelo menos 30 minutos de antecedência.",
         },
         card2: {
           stepNumber: 2,
