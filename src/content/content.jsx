@@ -52,8 +52,13 @@ const content = {
     },
     hero: {
       miniTag: "PASSEIO DE BARCO EM ARRAIAL DO CABO - RJ",
-      title: <h1 className="mb-[16px]">Descubra Arraial de uma maneira única e inesquecível</h1>,
-      subtitle: "Uma experiência extraordinária para aproveitar o melhor do Caribe Brasileiro",
+      title: (
+        <h1 className="mb-[16px]">
+          Descubra Arraial de uma maneira única e inesquecível
+        </h1>
+      ),
+      subtitle:
+        "Uma experiência extraordinária para aproveitar o melhor do Caribe Brasileiro",
       ctaButtonText: "Agende seu passeio",
       ctaButtonAriaLabel:
         "Botão para chamada de ação para contato pelo whatsapp",
@@ -421,33 +426,38 @@ const content = {
     features: {
       miniTag: "PASSEIO DE BARCO",
       title: "Descubra as maravilhas deste lugar paradisíaco",
-      subtitle: "Muita diversão e alegria na atividade turística mais requisitada em Arraial do Cabo",
+      subtitle:
+        "Muita diversão e alegria na atividade turística mais requisitada em Arraial do Cabo",
       imgFeatures: imgFeatures,
       imgDivisor: imgDivisor,
       card1: {
         title: "Águas Cristalinas",
-        subtitle: "Navegue por águas que parecem cristal, perfeita para admirar a vida marinha e os encantos subaquáticos.",
+        subtitle:
+          "Navegue por águas que parecem cristal, perfeita para admirar a vida marinha e os encantos subaquáticos.",
         img: featuresImg1,
         buttonLabel: "Saiba mais",
         buttonLink: `${links.whatsapp}Olá! Vim através do site e gostaria de saber sobre sites.`,
       },
       card2: {
         title: "Praias Paradisíacas",
-        subtitle: "Explore praias famosas, com areia branca e águas turquesas, com vistas deslumbrantes.",
+        subtitle:
+          "Explore praias famosas, com areia branca e águas turquesas, com vistas deslumbrantes.",
         img: featuresImg2,
         buttonLabel: "Saiba mais",
         buttonLink: `${links.whatsapp}Olá! Vim através do site e gostaria de saber sobre landing pages.`,
       },
       card3: {
         title: "Vida Marinha",
-        subtitle: "Capture momentos inesquecíveis com vistas panorâmicas deslumbrantes.",
+        subtitle:
+          "Capture momentos inesquecíveis com vistas panorâmicas deslumbrantes.",
         img: featuresImg3,
         buttonLabel: "Saiba mais",
         buttonLink: `${links.whatsapp}Olá! Vim através do site e gostaria de saber sobre landing pages.`,
       },
       card4: {
         title: "Conforto a Bordo",
-        subtitle: "Desfrute de uma embarcação equipada com áreas sombreadas e ao ar livre, som ambiente.",
+        subtitle:
+          "Desfrute de uma embarcação equipada com áreas sombreadas e ao ar livre, som ambiente.",
         img: featuresImg4,
         buttonLabel: "Saiba mais",
         buttonLink: `${links.whatsapp}Olá! Vim através do site e gostaria de saber sobre landing pages.`,
@@ -463,22 +473,25 @@ const content = {
           stepNumber: 1,
           cardTitle: "Horários",
           cardDescription:
-            "Passeios diários com saídas às 9h e às 14h. Recomendamos chegar com pelo menos 30 minutos de antecedência.",
+            "Passeios diários com saídas das 9h e às 14h. Recomendamos chegar com pelo menos 30 minutos de antecedência.",
         },
         card2: {
           stepNumber: 2,
           cardTitle: "Duração",
-          cardDescription: "São 4 horas intensas de puro encanto e diversão, onde você desfruta de todo conforto à bordo e da experiência única da paisagem.",
+          cardDescription:
+            "São 4 horas intensas de puro encanto e diversão, onde você desfruta de todo conforto à bordo e da experiência única da paisagem.",
         },
         card3: {
           stepNumber: 3,
           cardTitle: "O que levar?",
-          cardDescription: "Protetor solar, chapéu ou boné, toalha, roupa de banho, e uma câmera para registrar cada momento especial.",
+          cardDescription:
+            "Protetor solar, chapéu ou boné, toalha, roupa de banho, e uma câmera para registrar cada momento especial.",
         },
         card4: {
           stepNumber: 4,
           cardTitle: "Segurança",
-          cardDescription: "Seguimos todos os protocolos de segurança e oferecemos coletes salva-vidas para todos os passageiros.",
+          cardDescription:
+            "Seguimos todos os protocolos de segurança e oferecemos coletes salva-vidas para todos os passageiros.",
         },
       },
     },
