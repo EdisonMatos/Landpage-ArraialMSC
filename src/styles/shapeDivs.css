@@ -48,9 +48,42 @@
   fill: #40a7bb;
 }
 
+
 /** For mobile devices **/
 @media (max-width: 767px) {
   .custom-shape-divider-bottom-azul svg {
+    width: calc(138% + 1.3px);
+    height: 48px;
+  }
+}
+
+
+/** Onda azul var-escura **/
+
+.custom-shape-divider-bottom-var-escura {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-var-escura svg {
+  position: relative;
+  display: block;
+  width: calc(138% + 1.3px);
+  height: 97px;
+}
+
+.custom-shape-divider-bottom-var-escura .shape-fill {
+  fill: #03618C;
+}
+
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-var-escura svg {
     width: calc(138% + 1.3px);
     height: 48px;
   }

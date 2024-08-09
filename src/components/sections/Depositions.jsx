@@ -7,7 +7,7 @@ import CarouselDivisV1 from "../../components/interactives/CarouselDivsV1";
 
 export default function Depositions() {
   return (
-    <div className="relative bg-bgSectionDark">
+    <div className="relative colorbottom-top">
       <SectionArea className="" paddingbot={false}>
         <SectionHeader
           className="text-center"
