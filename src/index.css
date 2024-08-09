@@ -60,5 +60,11 @@
   animation: fadeOut 1s ease-in-out;
 }
 
+.colortop-bottom {
+  background: linear-gradient(to bottom, #40A7BB, #03618C);
+}
 
+.colorbottom-top {
+  background: linear-gradient(to bottom, #03618C, #40A7BB);
+}
 

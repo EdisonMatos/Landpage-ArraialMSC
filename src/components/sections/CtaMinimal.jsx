@@ -41,7 +41,7 @@ export default function CtaMinimal() {
           </SectionWrapper>
         </SectionArea>
       </MotionDivDownToUp>
-      <div class="custom-shape-divider-bottom-azul mt-[64px] desktop1:mt-[70px]">
+      <div class="custom-shape-divider-bottom-var-escura mt-[64px] desktop1:mt-[70px]">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
