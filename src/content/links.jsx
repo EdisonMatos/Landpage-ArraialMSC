@@ -7,7 +7,7 @@ const links = {
     instagram: "https://www.instagram.com/arraialmelhorsooceu/",
     facebook: "#",
     linkedin: "#",
-    twitter: "#",
+    twitter: "https://x.com/OArraialdocabo",
   },
 };
 
