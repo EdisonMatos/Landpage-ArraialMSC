@@ -186,7 +186,7 @@ export default function HeroBgImg() {
                   </div>
                 </MotionDivDownToUp>
                 <MotionDivDownToUp className="mt-[40px] w-full ">
-                  <a href="#" onClick={onClick}>
+                  <a href="#" className="flex justify-center" onClick={onClick}>
                     <p className="text-center text-white underline transition hover:scale-125 [text-shadow:_2px_2px_10px_rgb(0_0_0_/_100%)]">
                       {content.texts.hero.secondaryCta}
                     </p>
@@ -264,12 +264,12 @@ export default function HeroBgImg() {
         </div>
       </div>
       <Dialog
-        className=" font-secondFont"
+        className="font-secondFont"
         header={modalTitle}
         visible={visible}
         onHide={() => setVisible(false)}
         style={{ width: "50vw" }}
-        breakpoints={{ "960px": "75vw", "641px": "90vw" }}
+        breakpoints={{ "4000px": "35vw", "1024px": "60vw", "641px": "90vw" }}
       >
         <p className="m-0 ">{modalContent}</p>
       </Dialog>
