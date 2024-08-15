@@ -13,14 +13,16 @@ export default function Faq() {
   return (
     <div className="relative bg-bgSectionDark">
       <SectionArea id="faq" className="">
-        <SectionHeader
-          className="text-center"
-          miniTitle={content.texts.faq.miniTag}
-          sectionHeaderTitle={content.texts.faq.title}
-          sectionHeaderSubtitle={content.texts.faq.subtitle}
-          titleColor="text-white"
-          subtitleColor="text-white opacity-70"
-        />
+        <MotionDivDownToUp className="w-full flex justify-center">
+          <SectionHeader
+            className="text-center"
+            miniTitle={content.texts.faq.miniTag}
+            sectionHeaderTitle={content.texts.faq.title}
+            sectionHeaderSubtitle={content.texts.faq.subtitle}
+            titleColor="text-white"
+            subtitleColor="text-white opacity-70"
+          />
+        </MotionDivDownToUp>
 
         <SectionWrapper className="flex justify-center">
           <MotionDivDownToUp className="flex justify-center w-full">

@@ -9,14 +9,16 @@ export default function Depositions() {
   return (
     <div className="relative colorbottom-top">
       <SectionArea className="" paddingbot={false}>
-        <SectionHeader
-          className="text-center"
-          miniTitle={content.texts.testimonials.miniTag}
-          sectionHeaderTitle={content.texts.testimonials.title}
-          sectionHeaderSubtitle={content.texts.testimonials.subtitle}
-          titleColor="text-white"
-          subtitleColor="text-white opacity-70"
-        />
+        <MotionDivDownToUp className="w-full flex justify-center">
+          <SectionHeader
+            className="text-center"
+            miniTitle={content.texts.testimonials.miniTag}
+            sectionHeaderTitle={content.texts.testimonials.title}
+            sectionHeaderSubtitle={content.texts.testimonials.subtitle}
+            titleColor="text-white"
+            subtitleColor="text-white opacity-70"
+          />
+        </MotionDivDownToUp>
 
         <SectionWrapper className="flex justify-center">
           <MotionDivDownToUp className="flex justify-center w-full">
