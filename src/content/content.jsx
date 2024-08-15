@@ -40,7 +40,7 @@ const content = {
     navbar: {
       logo: {
         img: logo,
-        alt: "Logomarca empty",
+        alt: "Logomarca Arraial Melhor Só o Céu",
       },
       solidLogo: {
         img: solidLogo,
