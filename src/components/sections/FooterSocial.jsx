@@ -247,7 +247,7 @@ function FooterSocial() {
               </div>
               <div className="h-[36px] hover:underline">
                 <Link
-                  to="service"
+                  to="about"
                   className="cursor-pointer"
                   spy={true}
                   smooth={true}
@@ -264,7 +264,7 @@ function FooterSocial() {
             <div className=" w-[46%] flex flex-col gap-y-[16px]">
               <div className="h-[36px] hover:underline">
                 <Link
-                  to="about"
+                  to="service"
                   className="cursor-pointer"
                   spy={true}
                   smooth={true}
