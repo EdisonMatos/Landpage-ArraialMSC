@@ -24,8 +24,8 @@ export default function HeroBgImg() {
     setModalTitle("Passeio de barco");
     setModalContent(
       <p>
-        <div class="text-xl font-bold mb-4">🛳️ ROTEIRO:</div>
-        <ul class="list-disc list-inside space-y-2">
+        <div class="text-paragraph5 font-bold mb-4">🛳️ ROTEIRO:</div>
+        <ul class="list-disc list-inside space-y-2 text-paragraph3">
           <li>
             Prainhas do Pontal do Atalaia: Gruta do Amor e a escadaria (⏱️
             Desembarque de 40 min)
@@ -38,8 +38,10 @@ export default function HeroBgImg() {
           <li>Praia do Forno (⏱️ Parada na enseada por 15 min)</li>
         </ul>
 
-        <div class="text-xl font-bold mt-8 mb-4">ℹ️ INFORMAÇÕES GERAIS:</div>
-        <ul class="list-disc list-inside space-y-2">
+        <div class="text-paragraph5 font-bold mt-8 mb-4">
+          ℹ️ INFORMAÇÕES GERAIS:
+        </div>
+        <ul class="list-disc list-inside space-y-2 text-paragraph3">
           <li>Nosso passeio tem duração de 3h30/4h.</li>
           <li>
             Nossas embarcações possuem banheiros masculino e feminino, música
@@ -77,8 +79,8 @@ export default function HeroBgImg() {
           </li>
         </ul>
 
-        <div class="text-xl font-bold mt-8 mb-4">⏰ HORÁRIO:</div>
-        <p>
+        <div class="text-paragraph5 font-bold mt-8 mb-4">⏰ HORÁRIO:</div>
+        <p className="text-paragraph3">
           Nosso passeio sai a partir das 09:30 (favor confirmar o horário).
           Pedimos que cheguem para o check-in com 1 hora de antecedência.
           Lembre-se: a cidade fica sempre lotada e com bastante trânsito 🚦,
@@ -87,8 +89,10 @@ export default function HeroBgImg() {
           cancelamento do passeio por motivos climáticos 🌧️.
         </p>
 
-        <div class="text-xl font-bold mt-8 mb-4">📞 PARA RESERVAR:</div>
-        <p>A reserva só é feita mediante pagamento.</p>
+        <div class="text-paragraph5 font-bold mt-8 mb-4">📞 PARA RESERVAR:</div>
+        <p className="text-paragraph3">
+          A reserva só é feita mediante pagamento.
+        </p>
         <MotionDivDownToUp>
           <div className="flex justify-start w-full mt-[16px]">
             <Button
@@ -112,13 +116,13 @@ export default function HeroBgImg() {
           </div>
         </MotionDivDownToUp>
 
-        <div class="text-red-600 font-bold mt-[60px] mb-4">
+        <div class="text-red-600 font-bold mt-[15px] mb-4 text-paragraph3">
           🔴 Cada passageiro deverá pagar uma taxa de embarque de R$ 10,00
           dentro do píer para acesso à embarcação (pagamento somente em DINHEIRO
           no local). Menores de 6 anos e maiores de 60 anos não pagam a taxa 🔴.
         </div>
 
-        <div class="text-red-600 font-bold">
+        <div class="text-red-600 font-bold text-paragraph3">
           ⚠️ Obs: É proibido entrar com cooler, bolsa térmica ou semelhantes.
           Garrafas ou copos de vidro também são proibidos. O check-in é feito na
           agência.
