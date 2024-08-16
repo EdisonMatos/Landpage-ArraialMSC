@@ -1,16 +1,16 @@
 import links from "./links";
 
-import logo from "../assets/imgs/logo/logo.png";
-import solidLogo from "../assets/imgs/logo/solidLogo.png";
-import bgHeroImg from "../assets/imgs/hero/bgHero.jpg";
+import logo from "../assets/imgs/logo/logo.webp";
+import solidLogo from "../assets/imgs/logo/solidLogo.webp";
+import bgHeroImg from "../assets/imgs/hero/bgHero.webp";
 
-import imgFeatures from "../assets/imgs/features/imgFeatures.jpeg";
-import imgDivisor from "../assets/imgs/features/imgDivisor.jpg";
+import imgFeatures from "../assets/imgs/features/imgFeatures.webp";
+import imgDivisor from "../assets/imgs/features/imgDivisor.webp";
 
-import aboutImg1 from "../assets/imgs/about/imgAbout.png";
+import aboutImg1 from "../assets/imgs/about/imgAbout.webp";
 import aboutSocialImg from "../assets/imgs/about/aboutSocialImg.jpg";
 
-import imgSteps from "../assets/imgs/steps/imgSteps.jpg";
+import imgSteps from "../assets/imgs/steps/imgSteps.webp";
 
 import numbersImgBg from "../assets/imgs/paralaxe/bgParalaxe1.jpg";
 
@@ -30,10 +30,10 @@ import teamMemberImg2 from "../assets/imgs/team/team2.webp";
 import teamMemberImg3 from "../assets/imgs/team/team3.webp";
 import teamMemberImg4 from "../assets/imgs/team/team4.webp";
 
-import imgTestimonial1 from "../assets/imgs/testimonials/testimonial1.jpg";
-import imgTestimonial2 from "../assets/imgs/testimonials/testimonial2.jpg";
-import imgTestimonial3 from "../assets/imgs/testimonials/testimonial3.jpg";
-import imgTestimonial4 from "../assets/imgs/testimonials/testimonial4.jpg";
+import imgTestimonial1 from "../assets/imgs/testimonials/testimonial1.webp";
+import imgTestimonial2 from "../assets/imgs/testimonials/testimonial2.webp";
+import imgTestimonial3 from "../assets/imgs/testimonials/testimonial3.webp";
+import imgTestimonial4 from "../assets/imgs/testimonials/testimonial4.webp";
 
 const content = {
   texts: {
