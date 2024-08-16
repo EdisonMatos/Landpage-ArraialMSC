@@ -5,7 +5,7 @@ import solidLogo from "../assets/imgs/logo/solidLogo.webp";
 import bgHeroImg from "../assets/imgs/hero/bgHero.webp";
 
 import imgFeatures from "../assets/imgs/features/imgFeatures.webp";
-import imgDivisor from "../assets/imgs/features/imgDivisor.jpg";
+import imgDivisor from "../assets/imgs/features/imgDivisor.webp";
 
 import aboutImg1 from "../assets/imgs/about/imgAbout.webp";
 import aboutSocialImg from "../assets/imgs/about/aboutSocialImg.jpg";
