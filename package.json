@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@headlessui/react": "^2.0.3",
-    "@mui/icons-material": "^5.15.10",
-    "@mui/material": "^5.15.18",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "@mui/x-date-pickers": "^7.19.0",
+    "dayjs": "^1.11.13",
     "framer-motion": "^11.0.5",
     "lucide-react": "^0.350.0",
     "primeicons": "^7.0.0",
