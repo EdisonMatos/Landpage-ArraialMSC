@@ -6,7 +6,7 @@ import content from "../../content/content";
 import Button from "../interactives/Button";
 import imgAppStore from "../../assets/imgs/hero/appStore.png";
 import imgGooglePlay from "../../assets/imgs/hero/googlePlay.png";
-import imgLaw from "../../assets/imgs/hero/lawHero.jpg";
+// import imgLaw from "../../assets/imgs/hero/lawHero.jpg";
 import imgPoints from "../../assets/imgs/about/points.png";
 import { Dialog } from "primereact/dialog";
 import "primereact/resources/themes/saga-blue/theme.css";
@@ -230,13 +230,13 @@ export default function HeroBgImg() {
                 </MotionDivDownToUp>
               </div> */}
             </div>
-            <div className="hidden">
+            {/* <div className="hidden">
               <MotionDivDownToUp className="relative flex justify-end">
-                {/* <img
+                <img
                   src={imgLaw}
                   alt="Foto de itens do direito"
                   className="bg-red-500 "
-                /> */}
+                />
                 <img
                   src={imgLaw}
                   alt="Foto de itens que representam a profissão de advogado"
@@ -248,7 +248,7 @@ export default function HeroBgImg() {
                   className="absolute opacity-75 phone1:right-[-10px] phone1:top-[20px] desktop1:right-[-40px] desktop1:top-[40px]"
                 ></img>
               </MotionDivDownToUp>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
