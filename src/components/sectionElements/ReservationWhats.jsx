@@ -8,19 +8,24 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import links from "../../content/links";
+import FloatingButtonHero from "../interactives/FloatingButtonHero";
 
 const whatsappContactLink = `https://wa.me/` + `${links.ctaWhatsapp}`;
 
-const ReservationWhats = () => {
+const ReservationWhats = ({ className }) => {
   const [value, setValue] = React.useState(dayjs("2022-04-17"));
 
   return (
-    <SectionArea paddingTopAndBottom={false} className="bg-[#1bb0ce] py-0">
+    <SectionArea paddingTopAndBottom={false} className={`py-0 absolute bottom-[-25%] desktop1:bottom-0 z-10 ${className}`}>
       <SectionWrapper className="">
-        <div className="flex desktop1:w-full justify-between desktop3:flex-row desktop1:gap-2 desktop3:gap-4 desktop3:w-full py-4 bg-blue-700">
-          <div className="flex flex-col desktop1:w-[17%] desktop3:flex-row desktop3:gap-2 items-center w-auto desktop3:w-[50%] bg-red-900">
+        <div className="desktop1:hidden">
+          <FloatingButtonHero className="" />
+        </div>
+
+        <div className="hidden desktop1:flex desktop1:bg-[#1bb0ce] desktop3:bottom-[10%] left-0 z-10  desktop1:w-full justify-between  desktop1:gap-2 desktop3:gap-4 desktop3:w-full desktop3:flex-row py-2">
+          <div className="flex flex-col desktop1:w-[17%] desktop3:flex-row desktop3:gap-2 items-center w-auto desktop3:w-[50%]">
             <div className="leading-[19px] w-full desktop3:w-[240px]">
-              <h1 className="font-bold desktop3:text-title2 text-white text-center ">
+              <h1 className="font-bold desktop3:text-title1 text-white text-center ">
                 FAÇA SUA RESERVA
               </h1>
               <p className="desktop1:text-paragraph1 desktop3:text-paragraph3 font-bold text-center text-green-700 ">
@@ -34,7 +39,7 @@ const ReservationWhats = () => {
             </div>
           </div>
           {/* Container das caixas */}
-          <div className="flex desktop1:w-[13%] desktop3:w-[50%] flex-col bg-green-900">
+          <div className="flex desktop1:w-[13%] desktop3:w-[50%] flex-col">
             <p className="text-white">Hotel</p>
             <FormControl className="bg-white rounded-[6px] w-full">
               <Select
@@ -53,7 +58,7 @@ const ReservationWhats = () => {
               </Select>
             </FormControl>
           </div>
-          <div className="flex desktop1:gap-3 desktop3:gap-4 w-[35%] bg-green-900">
+          <div className="flex desktop1:gap-3 desktop3:gap-4 w-[35%]">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <div className="flex flex-col desktop1:gap-0 desktop3:w-full">
                 <p className="text-white">Data de Entrada</p>
@@ -85,7 +90,7 @@ const ReservationWhats = () => {
               </button>
             </a>
           </div>
-          <div className="flex desktop1:gap-4 desktop3:gap-6 desktop3:w-full text-white bg-red-900">
+          <div className="flex desktop1:gap-2 desktop3:w-full text-white">
             <div className="flex h-8 relative desktop1:top-10 desktop3:top-[40px] cursor-pointer hover:text-green-600 transition-all">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +121,7 @@ const ReservationWhats = () => {
                 <path d="M14.05 6A5 5 0 0 1 18 10" />
               </svg>
             </div>
-            <div className="flex desktop1:w-auto relative desktop1:top-10 desktop1:text-paragraph2 desktop3:text-title2 desktop1:h-9 desktop3:top-[33px]">
+            <div className="flex desktop1:w-auto relative desktop1:top-10 desktop1:text-paragraph2 desktop1:h-9 desktop3:top-[37px] desktop3:text-title1 ">
               <p className="">(00)00000-0000</p>
             </div>
           </div>

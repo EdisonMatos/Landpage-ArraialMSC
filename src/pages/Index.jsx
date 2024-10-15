@@ -13,15 +13,13 @@ import HowItWorksImage from "../components/sections/HowItWorksImage";
 import CtaMinimal from "../components/sections/CtaMinimal";
 import Depositions from "../components/sections/Depositions";
 import ReservationWhats from "../components/sectionElements/ReservationWhats";
-import FloatingActionButtonExtendedSize from "../components/interactives/FloatingButtonHero";
 
 export default function Index() {
   return (
     <div>
       <NavbarSocial />
       <HeroBgImg />
-      <FloatingActionButtonExtendedSize />
-      <ReservationWhats />
+      {/* <ReservationWhats /> */}
       <FeaturesWithIcons />
       <HowItWorksImage />
       {/* <Numbers /> */}
