@@ -2,10 +2,16 @@ import * as React from "react";
 import Fab from "@mui/material/Fab";
 import Box from "@mui/material/Box";
 
-export default function FloatingButtonHero({ className }) {
+export default function FloatingButtonHero({ className, onClick }) {
   return (
     <Box sx={{ "& > :not(style)": { m: 1 } }} className={className}>
-      <Fab variant="extended" size="small" color="primary" className="gap-2">
+      <Fab
+        variant="extended"
+        size="small"
+        color="primary"
+        className="gap-2"
+        onClick={onClick}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -18,10 +24,10 @@ export default function FloatingButtonHero({ className }) {
         </svg>
         Faça sua Reserva
       </Fab>
-      {/* <Fab variant="extended" size="medium" color="primary">
+      {/* <Fab variant="extended" size="medium" color="primary" onClick={onClick}>
         Faça sua Reserva
       </Fab>
-      <Fab variant="extended" color="primary">
+      <Fab variant="extended" color="primary" onClick={onClick}>
         Faça sua Reserva
       </Fab> */}
     </Box>

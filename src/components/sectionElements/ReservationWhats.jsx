@@ -1,7 +1,7 @@
 import "@mui/material/styles";
 import SectionArea from "../sectionElements/SectionArea";
 import SectionWrapper from "../sectionElements/SectionWrapper";
-import * as React from "react";
+import React, { useState } from 'react';
 import dayjs from "dayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -9,17 +9,33 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import links from "../../content/links";
 import FloatingButtonHero from "../interactives/FloatingButtonHero";
+import ReservationForm from "../interactives/ReservationForm";
 
 const whatsappContactLink = `https://wa.me/` + `${links.ctaWhatsapp}`;
 
 const ReservationWhats = ({ className }) => {
   const [value, setValue] = React.useState(dayjs("2022-04-17"));
 
+  const [isFormVisible, setFormVisible] = useState(false); // Estado para controlar a visibilidade do formulário
+
+  const handleOpenForm = () => {
+    setFormVisible(!isFormVisible); // Alterna a visibilidade do formulário
+  };
+
   return (
-    <SectionArea paddingTopAndBottom={false} className={`py-0 absolute bottom-[-25%] desktop1:bottom-0 z-10 ${className}`}>
+    <SectionArea
+      paddingTopAndBottom={false}
+      className={`py-0 absolute bottom-[-25%] desktop1:bottom-0 z-10 ${className}`}
+    >
       <SectionWrapper className="">
         <div className="desktop1:hidden">
-          <FloatingButtonHero className="" />
+          <FloatingButtonHero
+            className="fixed bottom-4 right-4"
+            onClick={handleOpenForm}
+          />
+
+          {/* Exibe o formulário somente se isFormVisible for true */}
+          {isFormVisible && <ReservationForm />}
         </div>
 
         <div className="hidden desktop1:flex desktop1:bg-[#1bb0ce] desktop3:bottom-[10%] left-0 z-10  desktop1:w-full justify-between  desktop1:gap-2 desktop3:gap-4 desktop3:w-full desktop3:flex-row py-2">
@@ -90,8 +106,8 @@ const ReservationWhats = ({ className }) => {
               </button>
             </a>
           </div>
-          <div className="flex desktop1:gap-2 desktop3:w-full text-white">
-            <div className="flex h-8 relative desktop1:top-10 desktop3:top-[40px] cursor-pointer hover:text-green-600 transition-all">
+          <div className="flex desktop1:gap-2 desktop3:w-[45%] text-white">
+            {/* <div className="flex h-8 relative desktop1:top-10 desktop3:top-[40px] cursor-pointer hover:text-green-600 transition-all">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -120,9 +136,11 @@ const ReservationWhats = ({ className }) => {
                 <path d="M14.05 2a9 9 0 0 1 8 7.94" />
                 <path d="M14.05 6A5 5 0 0 1 18 10" />
               </svg>
-            </div>
-            <div className="flex desktop1:w-auto relative desktop1:top-10 desktop1:text-paragraph2 desktop1:h-9 desktop3:top-[37px] desktop3:text-title1 ">
-              <p className="">(00)00000-0000</p>
+            </div> */}
+            <div className="flex desktop1:w-full relative desktop1:top-10 desktop1:text-paragraph2 desktop1:h-9 desktop3:top-[37px] desktop1:justify-end desktop3:text-title1 text-center ">
+              <p className="cursor-pointer hover:text-green-600 transition-all">
+                (00)00000-0000
+              </p>
             </div>
           </div>
         </div>
