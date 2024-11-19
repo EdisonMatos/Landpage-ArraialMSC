@@ -42,7 +42,7 @@ export default function FeaturesWithIcons() {
             </MotionDivDownToUp>
           </div>
           <MotionDivDownToUp className="w-full flex justify-center">
-            <div className="hidden desktop1:flex justify-center w-full col2">
+            <div className="hidden h-auto desktop1:flex justify-center w-full col2">
               <img
                 src={content.texts.features.imgFeatures}
                 alt="Imagem ilustrativa da seção"
