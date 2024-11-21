@@ -10,6 +10,8 @@ import Icon2 from "../../assets/imgs/icons/icon2.webp";
 import Icon3 from "../../assets/imgs/icons/icon3.webp";
 import Icon4 from "../../assets/imgs/icons/icon4.webp";
 
+// comentário para testar a subida do código
+
 export default function FeaturesWithIcons() {
   return (
     <SectionArea id="service" className="" paddingbot={false}>
