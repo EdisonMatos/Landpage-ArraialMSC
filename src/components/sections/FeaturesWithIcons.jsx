@@ -23,7 +23,7 @@ export default function FeaturesWithIcons() {
         />
       </MotionDivDownToUp>
       <SectionWrapper>
-        <div className="flex flex-col items-center justify-between w-full tablet1:flex-row">
+        <div className="flex flex-col items-center justify-evenly w-full tablet1:flex-row">
           <div className="col1">
             <MotionDivDownToUp>
               <IconFeatureCard
@@ -41,7 +41,7 @@ export default function FeaturesWithIcons() {
               />
             </MotionDivDownToUp>
           </div>
-          <MotionDivDownToUp className="w-full flex justify-center">
+          <MotionDivDownToUp className="hidden desktop1:flex w-full justify-center">
             <div className="hidden h-auto desktop1:flex justify-center w-full col2">
               <img
                 src={content.texts.features.imgFeatures}
