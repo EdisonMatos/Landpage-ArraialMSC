@@ -10,6 +10,8 @@ import Icon2 from "../../assets/imgs/icons/icon2.webp";
 import Icon3 from "../../assets/imgs/icons/icon3.webp";
 import Icon4 from "../../assets/imgs/icons/icon4.webp";
 
+// Vercel update
+
 export default function FeaturesWithIcons() {
   return (
     <SectionArea id="service" className="" paddingbot={false}>
@@ -23,7 +25,7 @@ export default function FeaturesWithIcons() {
         />
       </MotionDivDownToUp>
       <SectionWrapper>
-        <div className="flex flex-col items-center justify-between w-full tablet1:flex-row">
+        <div className="flex flex-col items-center justify-evenly w-full tablet1:flex-row">
           <div className="col1">
             <MotionDivDownToUp>
               <IconFeatureCard
@@ -41,8 +43,8 @@ export default function FeaturesWithIcons() {
               />
             </MotionDivDownToUp>
           </div>
-          <MotionDivDownToUp className="w-full flex justify-center">
-            <div className="hidden desktop1:flex justify-center w-full col2">
+          <MotionDivDownToUp className="hidden desktop1:flex w-full justify-center">
+            <div className="hidden h-auto desktop1:flex justify-center w-full col2">
               <img
                 src={content.texts.features.imgFeatures}
                 alt="Imagem ilustrativa da seção"
