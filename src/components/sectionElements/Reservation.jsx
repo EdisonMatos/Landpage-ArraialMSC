@@ -6,8 +6,9 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Dropdown } from "primereact/dropdown";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import Button from "../../components/interactives/Button";
 
 export default function Reservation({ className }) {
   const [value, setValue] = React.useState(dayjs("2022-04-17"));
@@ -34,29 +35,30 @@ export default function Reservation({ className }) {
     <SectionArea>
       <SectionWrapper>
         <div
-          className={`${className}:"relative fixed z-20 bottom-0 mb-10 bg-white shadow-lg `}
+          className={`${className}:"relative fixed z-20 bottom-0 justify-center mb-10 text-white font-mainFont w-[90%]`}
         >
           <div className="desktop1:hidden">
-            <Stack direction="row" spacing={2}>
+            {/* <Stack direction="row" spacing={2}>
               <Button onClick={ButtonFlooting} variant="contained">
                 Fazer Reserva
               </Button>
-            </Stack>
+            </Stack> */}
+            <Button className="flex m-auto" label="fazer Reserva" size="small" />
           </div>
 
           <div className=" hidden desktop1:flex bg-blue-400 w-full gap-4 py-2 justify-evenly">
             {/* texto1 */}
             <div className="flex items-center desktop1:text-paragraph3">
               <div className="flex flex-col text-center w-full">
-                <h1>FAÇA SUA RESERVA</h1>
-                <p>Parcele em até 6x sem juros</p>
+                <h1 className="font-semibold">FAÇA SUA RESERVA</h1>
+                <p className=" text-paragraph2 ">Parcele em até 6x sem juros</p>
               </div>
               <div className="flex text-center">
                 <h5>Melhor Preço Garantido</h5>
               </div>
             </div>
             {/* check */}
-            <div className="bg-yellow-200 flex items-end gap-4">
+            <div className="flex items-end gap-4">
               <div className="flex flex-col items-start mb-1">
                 <p>Selecione</p>
                 <Dropdown
@@ -64,7 +66,7 @@ export default function Reservation({ className }) {
                   onChange={(e) => setSelectedCity(e.value)}
                   options={cities}
                   optionLabel="name"
-                  className="w-[150px] h-[40px] items-center tablet1:w-14rem"
+                  className="w-[150px] h-[40px] font-mainFont items-center"
                 />
               </div>
 
@@ -78,31 +80,62 @@ export default function Reservation({ className }) {
                       format="DD/MM/YYYY"
                       sx={{
                         width: "150px", // Define a largura
-                        "& .MuiInputBase-root": { height: "40px" }, // Ajuste de altura
+                        "& .MuiInputBase-root": {
+                          height: "40px",
+                          color: "white", // Texto em branco
+                        },
+                        "& .MuiSvgIcon-root": {
+                          color: "white", // Ícone em branco
+                        },
+                        "& .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "white", // Borda ("corda") em branco
+                        },
+                        "&:hover .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "white", // Borda ao passar o mouse
+                        },
+                        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "white", // Borda ao focar no campo
+                        },
                       }}
                     />
                   </div>
                   <div className="flex flex-col items-start mb-1">
                     <p>Data de Saída</p>
                     <DatePicker
-                    format="DD/MM/YYYY"
+                      format="DD/MM/YYYY"
                       value={value}
                       onChange={(newValue) => setValue(newValue)}
                       sx={{
-                        width: "150px",
-                        "& .MuiInputBase-root": { height: "40px" },
+                        width: "150px", // Define a largura
+                        "& .MuiInputBase-root": {
+                          height: "40px",
+                          color: "white", // Texto em branco
+                        },
+                        "& .MuiSvgIcon-root": {
+                          color: "white", // Ícone em branco
+                        },
+                        "& .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "white", // Borda ("corda") em branco
+                        },
+                        "&:hover .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "white", // Borda ao passar o mouse
+                        },
+                        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "white", // Borda ao focar no campo
+                        },
                       }}
                     />
                   </div>
                 </div>
               </LocalizationProvider>
 
-              <button
+              {/* <button
                 onClick={handleClick}
                 className="px-8 py-2 mb-1 bg-green-500"
               >
                 Reservar
-              </button>
+              </button> */}
+              <Button size="small" label="Reservar" />
             </div>
 
             {/* contato */}
