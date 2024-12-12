@@ -12,6 +12,7 @@ import { Dialog } from "primereact/dialog";
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
+import Reservation from "../../components/sectionElements/Reservation";
 
 const whatsappContactLink = `https://wa.me/` + `${links.ctaWhatsapp}`;
 
@@ -252,6 +253,10 @@ export default function HeroBgImg() {
           </div>
         </div>
       </div>
+      {/* <div className="relative">
+        <Reservation className="fixed z-20 bottom-0 left-0 right-0 bg-white shadow-lg p-4" />
+      </div> */}
+
       <div className="bg-black bg-opacity-40 desktop2:bg-opacity-10">
         <div class="custom-shape-divider-bottom-1722451194 ">
           <svg

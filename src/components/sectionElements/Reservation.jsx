@@ -2,17 +2,25 @@ import React, { useState } from "react";
 import SectionArea from "./SectionArea";
 import SectionWrapper from "./SectionWrapper";
 import dayjs from "dayjs";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Dropdown } from "primereact/dropdown";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
-export default function Reservation() {
+export default function Reservation({ className }) {
   const [value, setValue] = React.useState(dayjs("2022-04-17"));
 
+  const handleClick = () => {
+    console.log("Estou funcionando");
+  };
+
+  const ButtonFlooting = () => {
+    console.log("Sou o ButtonFlooting e estou funcionando Biell");
+  };
+
   //Opções do Dropdow
-  const [selectedCity, setSelectedCity] = useState(null);
   const cities = [
     { name: "New York", code: "NY" },
     { name: "Rome", code: "RM" },
@@ -20,60 +28,89 @@ export default function Reservation() {
     { name: "Istanbul", code: "IST" },
     { name: "Paris", code: "PRS" },
   ];
+  const [selectedCity, setSelectedCity] = useState(cities[0]);
 
   return (
     <SectionArea>
       <SectionWrapper>
-        <div className="bg-blue-900 w-full flex gap-4 py-2">
-        {/* texto1 */}
-          <div className=" flex items-center">
-            <div>
-              <h1>FAÇA SUA RESERVA</h1>
-              <p>Parcele em até 6x sem juros</p>
-            </div>
-            <div>
-              <h5>Melhor Preço Garantido</h5>
-            </div>
-          </div>
-          {/* check */}
-          <div className=" flex items-end w-[50%] gap-2">
-            <Dropdown
-              value={selectedCity}
-              onChange={(e) => setSelectedCity(e.value)}
-              options={cities}
-              optionLabel="name"
-              placeholder="Select"
-              className="w-[20%] h-14 items-center md:w-14rem"
-            />
-
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DemoContainer components={["DatePicker", "DatePicker"]}>
-                <div>
-                  <p>Data de Entrada</p>
-                  <DatePicker
-                    defaultValue={dayjs("2022-04-17")}
-                    sx={{ width: "150px"}}
-                  />
-                </div>
-                <div>
-                  <p>Data de Saída</p>
-                  <DatePicker
-                    value={value}
-                    onChange={(newValue) => setValue(newValue)}
-                    sx={{ width: "150px"}}
-                  />
-                </div>
-              </DemoContainer>
-            </LocalizationProvider>
-            <button className="px-8 py-2 bg-green-500">Pesquisar</button>
+        <div
+          className={`${className}:"relative fixed z-20 bottom-0 mb-10 bg-white shadow-lg `}
+        >
+          <div className="desktop1:hidden">
+            <Stack direction="row" spacing={2}>
+              <Button onClick={ButtonFlooting} variant="contained">
+                Fazer Reserva
+              </Button>
+            </Stack>
           </div>
 
-          {/* contato */}
-          <div className=" flex gap-4 w-auto m-auto">
+          <div className=" hidden desktop1:flex bg-blue-400 w-full gap-4 py-2 justify-evenly">
+            {/* texto1 */}
+            <div className="flex items-center desktop1:text-paragraph3">
+              <div className="flex flex-col text-center w-full">
+                <h1>FAÇA SUA RESERVA</h1>
+                <p>Parcele em até 6x sem juros</p>
+              </div>
+              <div className="flex text-center">
+                <h5>Melhor Preço Garantido</h5>
+              </div>
+            </div>
+            {/* check */}
+            <div className="bg-yellow-200 flex items-end gap-4">
+              <div className="flex flex-col items-start mb-1">
+                <p>Selecione</p>
+                <Dropdown
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.value)}
+                  options={cities}
+                  optionLabel="name"
+                  className="w-[150px] h-[40px] items-center tablet1:w-14rem"
+                />
+              </div>
+
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                {/* Flex-row para alinhar os DatePickers lado a lado */}
+                <div className="flex flex-row gap-4 items-center">
+                  <div className="flex flex-col items-start mb-1">
+                    <p>Data de Entrada</p>
+                    <DatePicker
+                      defaultValue={dayjs("2022-04-17")}
+                      format="DD/MM/YYYY"
+                      sx={{
+                        width: "150px", // Define a largura
+                        "& .MuiInputBase-root": { height: "40px" }, // Ajuste de altura
+                      }}
+                    />
+                  </div>
+                  <div className="flex flex-col items-start mb-1">
+                    <p>Data de Saída</p>
+                    <DatePicker
+                    format="DD/MM/YYYY"
+                      value={value}
+                      onChange={(newValue) => setValue(newValue)}
+                      sx={{
+                        width: "150px",
+                        "& .MuiInputBase-root": { height: "40px" },
+                      }}
+                    />
+                  </div>
+                </div>
+              </LocalizationProvider>
+
+              <button
+                onClick={handleClick}
+                className="px-8 py-2 mb-1 bg-green-500"
+              >
+                Reservar
+              </button>
+            </div>
+
+            {/* contato */}
+            {/* <div className=" flex gap-4 w-auto bg-purple-600 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               fill="currentColor"
               className="bi bi-whatsapp"
               viewBox="0 0 16 16"
@@ -83,8 +120,8 @@ export default function Reservation() {
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -98,7 +135,8 @@ export default function Reservation() {
               <path d="M14.05 6A5 5 0 0 1 18 10" />
             </svg>
 
-            <h5>(00) 0000-0000</h5>
+            <h5 className="desktop1:text-paragraph3">(00) 0000-0000</h5>
+          </div> */}
           </div>
         </div>
       </SectionWrapper>
