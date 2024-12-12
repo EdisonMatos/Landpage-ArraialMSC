@@ -14,11 +14,11 @@ export default function Reservation({ className }) {
   const [value, setValue] = React.useState(dayjs("2022-04-17"));
 
   const handleClick = () => {
-    console.log("Estou funcionando");
+    console.log("Ooi, sou o Botão das telas MAIORES e estou funcionando Biell");
   };
 
-  const ButtonFlooting = () => {
-    console.log("Sou o ButtonFlooting e estou funcionando Biell");
+  const ButtonFloating = () => {
+    console.log("Ooi, sou o Botão das telas MENORES e estou funcionando Biell");
   };
 
   //Opções do Dropdow
@@ -35,7 +35,7 @@ export default function Reservation({ className }) {
     <SectionArea>
       <SectionWrapper>
         <div
-          className={`${className}:"relative fixed z-20 bottom-0 justify-center mb-10 text-white font-mainFont w-[90%]`}
+          className={`${className}:"relative fixed z-20 bottom-0 justify-center mb-10 text-secondary font-mainFont w-[95%]`}
         >
           <div className="desktop1:hidden">
             {/* <Stack direction="row" spacing={2}>
@@ -43,10 +43,10 @@ export default function Reservation({ className }) {
                 Fazer Reserva
               </Button>
             </Stack> */}
-            <Button className="flex m-auto" label="fazer Reserva" size="small" />
+            <Button onClick={ButtonFloating} className="flex m-auto" label="fazer Reserva" size="small" />
           </div>
 
-          <div className=" hidden desktop1:flex bg-blue-400 w-full gap-4 py-2 justify-evenly">
+          <div className=" hidden desktop1:flex bg-white w-full gap-4 py-2 justify-evenly">
             {/* texto1 */}
             <div className="flex items-center desktop1:text-paragraph3">
               <div className="flex flex-col text-center w-full">
@@ -66,7 +66,7 @@ export default function Reservation({ className }) {
                   onChange={(e) => setSelectedCity(e.value)}
                   options={cities}
                   optionLabel="name"
-                  className="w-[150px] h-[40px] font-mainFont items-center"
+                  className="w-[150px] h-[40px] font-mainFont bg-secondary/30 items-center"
                 />
               </div>
 
@@ -82,19 +82,19 @@ export default function Reservation({ className }) {
                         width: "150px", // Define a largura
                         "& .MuiInputBase-root": {
                           height: "40px",
-                          color: "white", // Texto em branco
+                          color: "#12759C", // Texto em branco
                         },
                         "& .MuiSvgIcon-root": {
-                          color: "white", // Ícone em branco
+                          color: "#12759C", // Ícone em branco
                         },
                         "& .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "white", // Borda ("corda") em branco
+                          borderColor: "#12759C", // Borda ("corda") em branco
                         },
                         "&:hover .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "white", // Borda ao passar o mouse
+                          borderColor: "#12759C", // Borda ao passar o mouse
                         },
                         "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "white", // Borda ao focar no campo
+                          borderColor: "#12759C", // Borda ao focar no campo
                         },
                       }}
                     />
@@ -109,19 +109,19 @@ export default function Reservation({ className }) {
                         width: "150px", // Define a largura
                         "& .MuiInputBase-root": {
                           height: "40px",
-                          color: "white", // Texto em branco
+                          color: "#12759C", // Texto em branco
                         },
                         "& .MuiSvgIcon-root": {
-                          color: "white", // Ícone em branco
+                          color: "#12759C", // Ícone em branco
                         },
                         "& .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "white", // Borda ("corda") em branco
+                          borderColor: "#12759C", // Borda ("corda") em branco
                         },
                         "&:hover .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "white", // Borda ao passar o mouse
+                          borderColor: "#12759C", // Borda ao passar o mouse
                         },
                         "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "white", // Borda ao focar no campo
+                          borderColor: "#12759C", // Borda ao focar no campo
                         },
                       }}
                     />
@@ -135,7 +135,7 @@ export default function Reservation({ className }) {
               >
                 Reservar
               </button> */}
-              <Button size="small" label="Reservar" />
+              <Button onClick={handleClick} className="mb-1 h-[60px]" size="small" label="Reservar" />
             </div>
 
             {/* contato */}
