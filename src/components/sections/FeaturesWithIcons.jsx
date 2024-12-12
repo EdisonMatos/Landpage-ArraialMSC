@@ -10,7 +10,7 @@ import Icon2 from "../../assets/imgs/icons/icon2.webp";
 import Icon3 from "../../assets/imgs/icons/icon3.webp";
 import Icon4 from "../../assets/imgs/icons/icon4.webp";
 
-// Vercel update
+// Vercel updateRe
 
 export default function FeaturesWithIcons() {
   return (
