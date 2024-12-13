@@ -135,7 +135,7 @@ export default function Reservation({ className }) {
               >
                 Reservar
               </button> */}
-              <Button onClick={handleClick} className="mb-1 h-[60px]" size="small" label="Reservar" />
+              <Button onClick={handleClick} className="mb-1 h-[60px]" gap={false} size="small" label="Reservar" />
             </div>
 
             {/* contato */}
