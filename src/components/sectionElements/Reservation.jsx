@@ -272,7 +272,7 @@ export default function Reservation({ className }) {
             </div>
           </div>
           <Dialog
-            className="font-secondFont"
+            className="font-secondFont desktop1:hidden"
             header={modalTitle}
             visible={visible}
             onHide={() => setVisible(false)}
