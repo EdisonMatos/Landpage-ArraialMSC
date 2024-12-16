@@ -176,7 +176,7 @@ export default function Reservation({ className }) {
             <Button
               onClick={onClick}
               className="flex m-auto mb-[-4px]"
-              label="fazer Reserva"
+              label="Fazer Reserva"
               size="small"
             />
           </div>
