@@ -181,7 +181,7 @@ export default function Reservation({ className }) {
             />
           </div>
 
-          <div className="hidden desktop1:flex bg-white w-[826px] gap-2 py-2 justify-evenly m-auto">
+          <div className="hidden desktop1:flex bg-white w-[826px] rounded-sm gap-2 py-2 justify-evenly m-auto">
             {/* texto1 */}
             <div className="flex items-center desktop1:text-paragraph3">
               <div className="flex flex-col text-center w-auto">
