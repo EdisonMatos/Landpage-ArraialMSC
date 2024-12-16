@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SectionArea from "./SectionArea";
 import SectionWrapper from "./SectionWrapper";
 import dayjs from "dayjs";
@@ -6,35 +6,40 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Dropdown } from "primereact/dropdown";
-// import Button from "@mui/material/Button";
 import Button from "../../components/interactives/Button";
 import { Dialog } from "primereact/dialog";
-import { CalendarDays } from 'lucide-react';
+import { CalendarDays } from "lucide-react";
 
 export default function Reservation({ className }) {
   const [visible, setVisible] = useState(false);
   const [modalContent, setModalContent] = useState("");
   const [modalTitle, setModalTitle] = useState("");
 
+  const [checkInValue, setCheckInValue] = useState(dayjs("2024-04-17"));
+  const [checkOutValue, setCheckOutValue] = useState(dayjs("2024-04-18"));
+  const [selectedOption, setSelectedOption] = useState({ name: "Passeio de Barco", code: "BARCO" });
+
+  // Opções do Dropdown
+  const cities = [
+    { name: "Passeio de Barco", code: "BARCO" },
+    { name: "Passeio de Buggy", code: "BUGGY" },
+  ];
+
+  useEffect(() => {
+    console.log("Selected City changed: ", selectedOption);
+  }, [selectedOption]);
+
   const onClick = () => {
     setModalTitle("Faça sua Reserva");
     setModalContent(
       <p>
         <div className="flex flex-col bg-white w-[95%] gap-2 py-2 justify-evenly m-auto">
-          {/* texto1 */}
-          {/* <div className="flex flex-col w-full items-center">
-              <div className="flex flex-col text-center w-auto">
-                <h1 className="font-semibold">FAÇA SUA RESERVA</h1>
-                <p className="text-paragraph2">Parcele em até 6x sem juros</p>
-              </div>
-            </div> */}
-          {/* check */}
           <div className="w-full flex flex-col gap-4">
             <div className="flex flex-col m-auto">
               <p>Selecione</p>
               <Dropdown
-                value={selectedCity}
-                onChange={(e) => setSelectedCity(e.value)}
+                value={selectedOption}
+                onChange={(e) => setSelectedOption(e.value)}
                 options={cities}
                 optionLabel="name"
                 className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center"
@@ -83,8 +88,6 @@ export default function Reservation({ className }) {
                         height: "40px",
                         color: "#12759C",
                       },
-                     
-
                       "& .MuiSvgIcon-root": {
                         color: "#12759C",
                       },
@@ -120,7 +123,7 @@ export default function Reservation({ className }) {
 
   const handleClick = () => {
     // Coletando os dados selecionados
-    const city = selectedCity?.name || "Não selecionado"; // Cidade
+    const city = selectedOption?.name || "Não selecionado"; // Cidade
     const checkInDate =
       dayjs(checkInValue?.$d).format("DD/MM/YYYY") || "Data não selecionada"; // Data de entrada
     const checkOutDate =
@@ -141,40 +144,23 @@ export default function Reservation({ className }) {
     window.open(whatsappLink, "_blank");
   };
 
-  const [checkInValue, setCheckInValue] = useState(dayjs("2024-04-17"));
-  const [checkOutValue, setCheckOutValue] = useState(dayjs("2024-04-18"));
-
-  // const ButtonFloating = () => {
-  //   console.log("Ooi, sou o Botão das telas MENORES e estou funcionando Biell");
-  // };
-
-  // Opções do Dropdown
-  const cities = [
-    { name: "New York", code: "NY" },
-    { name: "Rome", code: "RM" },
-    { name: "London", code: "LDN" },
-    { name: "Istanbul", code: "IST" },
-    { name: "Paris", code: "PRS" },
-  ];
-  const [selectedCity, setSelectedCity] = useState(cities[0]);
-
   return (
-    <SectionArea className="fixed bottom-0">
+    <SectionArea className="fixed bottom-0 z-20">
       <SectionWrapper className="fixed bottom-0">
         <div
-          className={`${className}:"fixed z-20 justify-center mb-6 text-secondary font-mainFont w-[95%]`}
+          className={`${className}:"fixed z-20 justify-center mb-10 text-secondary font-mainFont w-[95%]`}
         >
           <div className="desktop1:hidden">
             <Button
               onClick={onClick}
-              className="flex m-auto mb-[-4px]"
+              className="flex w-[65%] m-auto mb-[-4px]"
               label="Fazer Reserva"
               size="small"
-              icon={<CalendarDays />}
+              icon={<CalendarDays className="w-5 h-5" />}
             />
           </div>
 
-          <div className="hidden desktop1:flex bg-white w-[826px] rounded-sm gap-2 py-2 justify-evenly m-auto shadow-md">
+          <div className="hidden desktop1:flex bg-white w-[826px] rounded-md gap-2 py-2 justify-evenly m-auto shadow-md">
             {/* texto1 */}
             <div className="flex items-center desktop1:text-paragraph3">
               <div className="flex flex-col text-center w-auto">
@@ -185,10 +171,10 @@ export default function Reservation({ className }) {
             {/* check */}
             <div className="flex items-end gap-4">
               <div className="flex flex-col items-start mb-1">
-                <p>Selecione</p>
+                <p>Atvidade</p>
                 <Dropdown
-                  value={selectedCity}
-                  onChange={(e) => setSelectedCity(e.value)}
+                  value={selectedOption}
+                  onChange={(e) => setSelectedOption(e.value)}
                   options={cities}
                   optionLabel="name"
                   className="w-[150px] h-[40px] font-mainFont bg-secondary/30 items-center"
