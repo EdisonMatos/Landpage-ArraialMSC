@@ -167,10 +167,10 @@ export default function Reservation({ className }) {
   const [selectedCity, setSelectedCity] = useState(cities[0]);
 
   return (
-    <SectionArea>
-      <SectionWrapper>
+    <SectionArea className="fixed bottom-0">
+      <SectionWrapper className="fixed bottom-0">
         <div
-          className={`${className}:"relative fixed z-20 bottom-0 justify-center mb-10 text-secondary font-mainFont w-[95%]`}
+          className={`${className}:"fixed z-20 justify-center mb-6 text-secondary font-mainFont w-[95%]`}
         >
           <div className="desktop1:hidden">
             <Button
