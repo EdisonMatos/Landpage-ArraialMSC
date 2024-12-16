@@ -20,7 +20,7 @@ export default function Reservation({ className }) {
     setModalTitle("Faça sua Reserva");
     setModalContent(
       <p>
-        <div className="flex flex-col bg-white w-auto gap-2 py-2 justify-evenly m-auto">
+        <div className="flex flex-col bg-white w-[95%] gap-2 py-2 justify-evenly m-auto">
           {/* texto1 */}
           {/* <div className="flex flex-col w-full items-center">
               <div className="flex flex-col text-center w-auto">
@@ -37,7 +37,7 @@ export default function Reservation({ className }) {
                 onChange={(e) => setSelectedCity(e.value)}
                 options={cities}
                 optionLabel="name"
-                className="w-[240px] phone2:w-[258px] h-[40px] font-mainFont bg-secondary/30 items-center"
+                className="w-[228px] phone2:w-[258px] h-[40px] font-mainFont bg-secondary/30 items-center"
               />
             </div>
 
@@ -51,7 +51,7 @@ export default function Reservation({ className }) {
                     onChange={(newValue) => setCheckInValue(newValue)}
                     format="DD/MM/YYYY"
                     sx={{
-                      width: "240px",
+                      width: "228px",
                       "& .MuiInputBase-root": {
                         height: "40px",
                         color: "#12759C",
@@ -83,7 +83,7 @@ export default function Reservation({ className }) {
                     onChange={(newValue) => setCheckOutValue(newValue)}
                     format="DD/MM/YYYY"
                     sx={{
-                      width: "240px",
+                      width: "228px",
                       "& .MuiInputBase-root": {
                         height: "40px",
                         color: "#12759C",
@@ -115,10 +115,11 @@ export default function Reservation({ className }) {
 
             <Button
               onClick={handleClick}
-              className="mb-1 w-[240px] phone2:w-[258px] h-[40px] m-auto"
+              className="mb-1 w-[228px] phone2:w-[258px] h-[40px] m-auto"
               gap={false}
               size="small"
               label="Reservar"
+              hover={false}
             />
           </div>
         </div>
