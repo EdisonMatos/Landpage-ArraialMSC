@@ -9,6 +9,7 @@ import { Dropdown } from "primereact/dropdown";
 // import Button from "@mui/material/Button";
 import Button from "../../components/interactives/Button";
 import { Dialog } from "primereact/dialog";
+import { CalendarDays } from 'lucide-react';
 
 export default function Reservation({ className }) {
   const [visible, setVisible] = useState(false);
@@ -178,6 +179,7 @@ export default function Reservation({ className }) {
               className="flex m-auto mb-[-4px]"
               label="Fazer Reserva"
               size="small"
+              icon={<CalendarDays />}
             />
           </div>
 
