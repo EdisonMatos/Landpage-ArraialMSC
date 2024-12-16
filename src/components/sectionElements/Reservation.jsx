@@ -37,7 +37,7 @@ export default function Reservation({ className }) {
                 onChange={(e) => setSelectedCity(e.value)}
                 options={cities}
                 optionLabel="name"
-                className="w-[228px] phone2:w-[258px] h-[40px] font-mainFont bg-secondary/30 items-center"
+                className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center"
               />
             </div>
 
@@ -51,15 +51,10 @@ export default function Reservation({ className }) {
                     onChange={(newValue) => setCheckInValue(newValue)}
                     format="DD/MM/YYYY"
                     sx={{
-                      width: "228px",
+                      width: "100%",
                       "& .MuiInputBase-root": {
                         height: "40px",
                         color: "#12759C",
-                      },
-                       // responsividade
-                       "@media (min-width: 374px) and (max-width: 1024px)": {
-                        width: "258px",
-                        
                       },
                       "& .MuiSvgIcon-root": {
                         color: "#12759C",
@@ -83,17 +78,12 @@ export default function Reservation({ className }) {
                     onChange={(newValue) => setCheckOutValue(newValue)}
                     format="DD/MM/YYYY"
                     sx={{
-                      width: "228px",
+                      width: "100%",
                       "& .MuiInputBase-root": {
                         height: "40px",
                         color: "#12759C",
                       },
-                      // responsividade
-                      "@media (min-width: 374px) and (max-width: 1024px)": {
-                        width: "258px",
-                        "& .MuiInputBase-root": {
-                        },
-                      },
+                     
 
                       "& .MuiSvgIcon-root": {
                         color: "#12759C",
@@ -115,7 +105,7 @@ export default function Reservation({ className }) {
 
             <Button
               onClick={handleClick}
-              className="mb-1 w-[228px] phone2:w-[258px] h-[40px] m-auto"
+              className="mb-1 w-full h-[40px] m-auto"
               gap={false}
               size="small"
               label="Reservar"
