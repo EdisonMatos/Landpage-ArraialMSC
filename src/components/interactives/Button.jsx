@@ -10,7 +10,8 @@ export default function Button({
   textclassName,
   size,
   sizeFeatures,
-  gap,
+  gap = true,
+  hover = true,
   removeTarget,
   removeAnchor,
   tagName,
@@ -18,11 +19,13 @@ export default function Button({
   if (size === "small") {
     sizeFeatures = "rounded-[5px] px-[18px] py-[10px]";
     textclassName = "text-paragraph3 font-secondFont";
-    gap = "gap-[10px]";
+    gap = gap ? "gap-[10px]" : "";
+    hover = hover ? "transition hover:scale-110" : "";
   } else {
     sizeFeatures = "rounded-[10px] px-[30px] py-[16px]";
     textclassName = "text-paragraph4 font-secondFont";
-    gap = "gap-[20px]";
+    gap = gap ? "gap-[20px]" : "";
+    hover = hover ? "transition hover:scale-110" : "";
   }
 
   return (
@@ -38,7 +41,7 @@ export default function Button({
         // className={`flex ${className} ${sizeFeatures} flex-row items-center justify-around transition bg-primary hover:bg-secondary hover:text-primary text-secondary hover:border-solid border-[1px] border-primary hover:border-primary`}
 
         // Botão com hover scale sem mudanca de cor
-        className={`flex ${className} ${sizeFeatures} flex-row items-center justify-around transition bg-primary text-darker  hover:scale-110`}
+        className={`flex ${className} ${sizeFeatures} flex-row items-center justify-around ${hover} bg-primary text-darker`}
       >
         <div className={`flex items-center text-center ${gap} min-h-[24px]`}>
           <div className="">{icon}</div>
