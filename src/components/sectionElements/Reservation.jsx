@@ -17,12 +17,15 @@ export default function Reservation({ className }) {
 
   const [checkInValue, setCheckInValue] = useState(dayjs("2024-04-17"));
   const [checkOutValue, setCheckOutValue] = useState(dayjs("2024-04-18"));
-  const [selectedOption, setSelectedOption] = useState({ name: "Passeio de Barco", code: "BARCO" });
+  const [selectedOption, setSelectedOption] = useState({
+    name: "Barco",
+    code: "BARCO",
+  });
 
   // Opções do Dropdown
   const cities = [
-    { name: "Passeio de Barco", code: "BARCO" },
-    { name: "Passeio de Buggy", code: "BUGGY" },
+    { name: "Barco", code: "BARCO" },
+    { name: " Buggy", code: "BUGGY" },
   ];
 
   useEffect(() => {
@@ -32,7 +35,7 @@ export default function Reservation({ className }) {
   const onClick = () => {
     // Atualiza o título do modal
     setModalTitle("Faça sua Reserva");
-  
+
     // Atualiza o conteúdo do modal
     setModalContent(
       <div className="flex flex-col bg-white w-[95%] gap-2 py-2 justify-evenly m-auto">
@@ -47,7 +50,7 @@ export default function Reservation({ className }) {
               className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center"
             />
           </div>
-  
+
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             {/* Flex-row para alinhar os DatePickers lado a lado */}
             <div className="flex flex-col gap-4 m-auto items-center">
@@ -107,7 +110,7 @@ export default function Reservation({ className }) {
               </div>
             </div>
           </LocalizationProvider>
-  
+
           <Button
             onClick={handleClick}
             className="mb-1 w-full h-[40px] m-auto"
@@ -119,11 +122,10 @@ export default function Reservation({ className }) {
         </div>
       </div>
     );
-  
+
     // Atualiza a visibilidade do modal
     setVisible(true);
   };
-  
 
   const handleClick = () => {
     // Coletando os dados selecionados
@@ -157,7 +159,7 @@ export default function Reservation({ className }) {
           <div className="desktop1:hidden">
             <Button
               onClick={onClick}
-              className="flex w-[65%] m-auto mb-[-4px]"
+              className="flex w-auto px-[10px] m-auto mb-[-4px]"
               label="Fazer Reserva"
               size="small"
               icon={<CalendarDays className="w-5 h-5" />}
@@ -267,7 +269,88 @@ export default function Reservation({ className }) {
               "375px": "288px",
             }}
           >
-            <p className="m-0 ">{modalContent}</p>
+            <div className="flex flex-col bg-white w-[95%] gap-2 py-2 justify-evenly m-auto">
+              <div className="w-full flex flex-col gap-4">
+                <div className="flex flex-col m-auto">
+                  <p>Atividade</p>
+                  <Dropdown
+                    value={selectedOption}
+                    onChange={(e) => setSelectedOption(e.value)}
+                    options={cities}
+                    optionLabel="name"
+                    className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center"
+                  />
+                </div>
+
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <div className="flex flex-col gap-4 m-auto items-center">
+                    <div className="flex flex-col items-start mb-1">
+                      <p>Data de Entrada</p>
+                      <DatePicker
+                        value={checkInValue}
+                        onChange={(newValue) => setCheckInValue(newValue)}
+                        format="DD/MM/YYYY"
+                        sx={{
+                          width: "100%",
+                          "& .MuiInputBase-root": {
+                            height: "40px",
+                            color: "#12759C",
+                          },
+                          "& .MuiSvgIcon-root": {
+                            color: "#12759C",
+                          },
+                          "& .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#12759C",
+                          },
+                          "&:hover .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#12759C",
+                          },
+                          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#12759C",
+                          },
+                        }}
+                      />
+                    </div>
+                    <div className="flex flex-col items-start mb-1">
+                      <p>Data de Saída</p>
+                      <DatePicker
+                        value={checkOutValue}
+                        onChange={(newValue) => setCheckOutValue(newValue)}
+                        format="DD/MM/YYYY"
+                        sx={{
+                          width: "100%",
+                          "& .MuiInputBase-root": {
+                            height: "40px",
+                            color: "#12759C",
+                          },
+                          "& .MuiSvgIcon-root": {
+                            color: "#12759C",
+                          },
+                          "& .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#12759C",
+                          },
+                          "&:hover .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#12759C",
+                          },
+                          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#12759C",
+                          },
+                        }}
+                      />
+                    </div>
+                  </div>
+                </LocalizationProvider>
+
+                <Button
+                  onClick={handleClick}
+                  className="mb-1 w-full h-[40px] m-auto"
+                  gap={false}
+                  size="small"
+                  label="Reservar"
+                  hover={false}
+                />
+              </div>
+            </div>
           </Dialog>
         </div>
       </SectionWrapper>
