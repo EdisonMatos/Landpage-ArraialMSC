@@ -18,14 +18,14 @@ export default function Reservation({ className }) {
   const [checkInValue, setCheckInValue] = useState(dayjs("2024-04-17"));
   const [checkOutValue, setCheckOutValue] = useState(dayjs("2024-04-18"));
   const [selectedOption, setSelectedOption] = useState({
-    name: "Barco",
+    name: "Passeio de Barco",
     code: "BARCO",
   });
 
   // Opções do Dropdown
   const cities = [
-    { name: "Barco", code: "BARCO" },
-    { name: " Buggy", code: "BUGGY" },
+    { name: "Passeio de Barco", code: "BARCO" },
+    { name: "Passeio de Buggy", code: "BUGGY" },
   ];
 
   useEffect(() => {
