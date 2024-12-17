@@ -29,7 +29,7 @@ export default function Reservation({ className }) {
   ];
 
   useEffect(() => {
-    console.log("Selected City changed: ", selectedOption);
+    console.log("Selected activity changed: ", selectedOption);
   }, [selectedOption]);
 
   const onClick = () => {
@@ -129,7 +129,7 @@ export default function Reservation({ className }) {
 
   const handleClick = () => {
     // Coletando os dados selecionados
-    const city = selectedOption?.name || "Não selecionado"; // Cidade
+    const activity = selectedOption?.name || "Não selecionado"; // Cidade
     const checkInDate =
       dayjs(checkInValue?.$d).format("DD/MM/YYYY") || "Data não selecionada"; // Data de entrada
     const checkOutDate =
@@ -137,12 +137,12 @@ export default function Reservation({ className }) {
 
     // Montando a mensagem para o WhatsApp
     const message = `Olá! Gostaria de fazer uma reserva com os seguintes detalhes:
-  - Cidade: ${city}
+  - Atividade: ${activity}
   - Data de Entrada: ${checkInDate}
   - Data de Saída: ${checkOutDate}`;
 
     // Link do WhatsApp com a mensagem
-    const whatsappLink = `https://wa.me/21972613067?text=${encodeURIComponent(
+    const whatsappLink = `https://wa.me/+5522999614246?text=${encodeURIComponent(
       message
     )}`;
 
@@ -159,7 +159,7 @@ export default function Reservation({ className }) {
           <div className="desktop1:hidden">
             <Button
               onClick={onClick}
-              className="flex w-auto px-[10px] m-auto mb-[-4px]"
+              className="flex w-auto px-[8px] m-auto mb-[-4px]"
               label="Fazer Reserva"
               size="small"
               icon={<CalendarDays className="w-5 h-5" />}
