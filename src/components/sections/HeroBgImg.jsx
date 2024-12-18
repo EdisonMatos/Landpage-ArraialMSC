@@ -143,7 +143,7 @@ export default function HeroBgImg() {
       <div className="relative z-10 flex w-full bg-black bg-opacity-40 desktop2:bg-opacity-10 items-left">
         <div className="w-full text-secondary justify-evenly">
           <div className="h-[125px] desktop3:h-[140px]" />
-          <div className="flex flex-col mx-auto w-[90%] max-w-[1215px] items-center  pt-[46px] pb-[50px] desktop1:pt-[120px] desktop1:pb-[120px]">
+          <div className="flex flex-col mx-auto w-[90%] max-w-[1215px] items-center  pt-[46px] pb-[50px] desktop1:pt-[120px] desktop1:pb-[50px]">
             <div className=" flex flex-col w-full desktop1:w-[60%] desktop1:mr-[20px]">
               <MotionDivDownToUp>
                 <div className="w-auto text-center font-secondFont phone1:text-paragraph4">

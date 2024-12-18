@@ -157,7 +157,7 @@ function FooterSocial() {
           {/* Ícones redes sociais */}
           <MotionDivDownToUp>
             <p className="opacity-90">Siga a gente nas redes sociais:</p>
-            <div className="opacity-90 mt-2">
+            <div className="mt-2 opacity-90">
               {" "}
               <div className="flex gap-[10px] items-center">
                 <a
@@ -324,7 +324,7 @@ function FooterSocial() {
 
       <div className="hidden w-[88%] max-w-[1110px] h-px bg-secondary"></div>
 
-      <div className="text-center w-[88%] max-w-[1110px] flex flex-col mb-[48px] phone2:mb-[80px] tablet1:mb-0">
+      <div className="text-center w-[88%] max-w-[1110px] flex flex-col mb-[48px] phone2:mb-[80px] desktop1:mb-[115px]">
         <p className="w-full opacity-75">
           {`${infos.footerInfos.year} - ${infos.name} - Todos os direitos reservados`}
         </p>
