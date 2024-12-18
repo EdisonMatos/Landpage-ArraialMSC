@@ -25,7 +25,7 @@ export default function Reservation({ className }) {
   // Opções do Dropdown
   const cities = [
     { name: "Passeio de Barco", code: "BARCO" },
-    { name: "Passeio de Buggy", code: "BUGGY" },
+    // { name: "Passeio de Buggy", code: "BUGGY" },
   ];
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Reservation({ className }) {
     // Atualiza o conteúdo do modal
     setModalContent(
       <div className="flex flex-col bg-white w-[95%] gap-2 py-2 justify-evenly m-auto">
-        <div className="w-full flex flex-col gap-4">
+        <div className="flex flex-col w-full gap-4">
           <div className="flex flex-col m-auto">
             <p>Atividade</p>
             <Dropdown
@@ -53,9 +53,9 @@ export default function Reservation({ className }) {
 
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             {/* Flex-row para alinhar os DatePickers lado a lado */}
-            <div className="flex flex-col gap-4 m-auto items-center">
+            <div className="flex flex-col items-center gap-4 m-auto">
               <div className="flex flex-col items-start mb-1">
-                <p>Data de Entrada</p>
+                <p>Data</p>
                 <DatePicker
                   value={checkInValue}
                   onChange={(newValue) => setCheckInValue(newValue)}
@@ -131,15 +131,15 @@ export default function Reservation({ className }) {
     // Coletando os dados selecionados
     const activity = selectedOption?.name || "Não selecionado"; // Cidade
     const checkInDate =
-      dayjs(checkInValue?.$d).format("DD/MM/YYYY") || "Data não selecionada"; // Data de entrada
+      dayjs(checkInValue?.$d).format("DD/MM/YYYY") || "Data não selecionada"; // Data
     const checkOutDate =
       dayjs(checkOutValue?.$d).format("DD/MM/YYYY") || "Data não selecionada"; // Data de saída
 
     // Montando a mensagem para o WhatsApp
     const message = `Olá! Gostaria de fazer uma reserva com os seguintes detalhes:
   - Atividade: ${activity}
-  - Data de Entrada: ${checkInDate}
-  - Data de Saída: ${checkOutDate}`;
+  - Data: ${checkInDate}`;
+    // - Data de Saída: ${checkOutDate}
 
     // Link do WhatsApp com a mensagem
     const whatsappLink = `https://wa.me/+5522999614246?text=${encodeURIComponent(
@@ -166,12 +166,14 @@ export default function Reservation({ className }) {
             />
           </div>
 
-          <div className="hidden desktop1:flex bg-white w-[826px] rounded-md gap-2 py-2 justify-evenly m-auto shadow-md">
+          <div className="hidden desktop1:flex bg-white w-[680px] rounded-md gap-2 py-2 justify-evenly m-auto shadow-md">
             {/* texto1 */}
             <div className="flex items-center desktop1:text-paragraph3">
-              <div className="flex flex-col text-center w-auto">
+              <div className="flex flex-col w-auto text-center">
                 <h1 className="font-semibold">FAÇA SUA RESERVA</h1>
-                <p className="text-paragraph2">Parcele em até 6x sem juros</p>
+                <p className="text-paragraph2">
+                  E aproveite o melhor de Arraial!
+                </p>
               </div>
             </div>
             {/* check */}
@@ -189,9 +191,9 @@ export default function Reservation({ className }) {
 
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 {/* Flex-row para alinhar os DatePickers lado a lado */}
-                <div className="flex flex-row gap-4 items-center">
+                <div className="flex flex-row items-center gap-4">
                   <div className="flex flex-col items-start mb-1">
-                    <p>Data de Entrada</p>
+                    <p>Data</p>
                     <DatePicker
                       value={checkInValue}
                       onChange={(newValue) => setCheckInValue(newValue)}
@@ -217,7 +219,7 @@ export default function Reservation({ className }) {
                       }}
                     />
                   </div>
-                  <div className="flex flex-col items-start mb-1">
+                  {/* <div className="flex flex-col items-start mb-1">
                     <p>Data de Saída</p>
                     <DatePicker
                       value={checkOutValue}
@@ -243,7 +245,7 @@ export default function Reservation({ className }) {
                         },
                       }}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </LocalizationProvider>
 
@@ -270,7 +272,7 @@ export default function Reservation({ className }) {
             }}
           >
             <div className="flex flex-col bg-white w-[95%] gap-2 py-2 justify-evenly m-auto">
-              <div className="w-full flex flex-col gap-4">
+              <div className="flex flex-col w-full gap-4">
                 <div className="flex flex-col m-auto">
                   <p>Atividade</p>
                   <Dropdown
@@ -283,9 +285,9 @@ export default function Reservation({ className }) {
                 </div>
 
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <div className="flex flex-col gap-4 m-auto items-center">
+                  <div className="flex flex-col items-center gap-4 m-auto">
                     <div className="flex flex-col items-start mb-1">
-                      <p>Data de Entrada</p>
+                      <p>Data</p>
                       <DatePicker
                         value={checkInValue}
                         onChange={(newValue) => setCheckInValue(newValue)}
@@ -311,7 +313,7 @@ export default function Reservation({ className }) {
                         }}
                       />
                     </div>
-                    <div className="flex flex-col items-start mb-1">
+                    {/* <div className="flex flex-col items-start mb-1">
                       <p>Data de Saída</p>
                       <DatePicker
                         value={checkOutValue}
@@ -337,7 +339,7 @@ export default function Reservation({ className }) {
                           },
                         }}
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </LocalizationProvider>
 
