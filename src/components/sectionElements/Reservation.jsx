@@ -317,6 +317,31 @@ export default function Reservation({ className }) {
                   />
                 </div>
 
+                <div className="mb-1">
+                <label>Adultos</label>
+                <input
+                  type="number"
+                  min="1"
+                  value={adults}
+                  onChange={(e) => setAdults(e.target.value)}
+                  className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center rounded-sm px-2"
+                />
+              </div>
+              <div className="mb-1">
+                <label>
+                  Crianças <br className="desktop2:hidden" />
+                  (acima de 6 anos)
+                </label>
+                <input
+                  type="number"
+                  min="0"
+                  value={children}
+                  onChange={(e) => setChildren(e.target.value)}
+                  className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center rounded-sm p-2"
+                />
+              </div>
+
+
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <div className="flex flex-col items-center gap-4 m-auto">
                     <div className="flex flex-col items-start mb-1">
