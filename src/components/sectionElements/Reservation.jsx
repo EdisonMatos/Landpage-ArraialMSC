@@ -146,7 +146,7 @@ export default function Reservation({ className }) {
     const message = `Olá! Gostaria de fazer uma reserva com os seguintes detalhes:
   - Atividade: ${activity}
   - Data: ${checkInDate}
-  - Quantidade de Adultos: ${adults}
+  - Quantidade de Passageiros: ${adults}
   - Quantidade de crianças: ${children}`;
     // - Data de Saída: ${checkOutDate}
 
@@ -199,7 +199,7 @@ export default function Reservation({ className }) {
               </div>
 
               <div className="mb-1">
-                <label>Adultos</label>
+                <label>Passageiros</label>
                 <input
                   type="number"
                   min="1"
@@ -318,7 +318,7 @@ export default function Reservation({ className }) {
                 </div>
 
                 <div className="mb-1">
-                <label>Adultos</label>
+                <label>Passageiros</label>
                 <input
                   type="number"
                   min="1"
