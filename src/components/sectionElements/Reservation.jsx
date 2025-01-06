@@ -198,19 +198,19 @@ export default function Reservation({ className }) {
                 />
               </div>
 
-              <div className="mb-1">
+              <div className="mb-1 desktop2:w-[95px]">
                 <label>Passageiros</label>
                 <input
                   type="number"
                   min="1"
                   value={adults}
                   onChange={(e) => setAdults(e.target.value)}
-                  className="w-[100px] desktop2:w-[150px] h-[40px] font-mainFont bg-secondary/30 items-center text-center rounded-sm"
+                  className="w-[100px] desktop2:w-[95px] h-[40px] font-mainFont bg-secondary/30 items-center text-center rounded-sm"
                 />
               </div>
-              <div className="mb-1">
+              <div className="mb-1 w-[150px]">
                 <label>
-                  Crianças <br className="desktop2:hidden" />
+                  Crianças <br className="" />
                   (acima de 6 anos)
                 </label>
                 <input
@@ -218,7 +218,7 @@ export default function Reservation({ className }) {
                   min="0"
                   value={children}
                   onChange={(e) => setChildren(e.target.value)}
-                  className="w-[150px] desktop2:w-[230px] h-[40px] font-mainFont bg-secondary/30 items-center text-center rounded-sm"
+                  className="w-[150px] h-[40px] font-mainFont bg-secondary/30 items-center text-center rounded-sm"
                 />
               </div>
 
