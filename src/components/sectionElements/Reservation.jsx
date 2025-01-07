@@ -26,8 +26,8 @@ export default function Reservation({ className }) {
     code: "BARCO",
   });
 
-  const [adults, setAdults] = useState(1); // Número de adultos
-  const [children, setChildren] = useState(0); // Número de crianças acima de 6 anos
+  const [adults, setAdults] = useState(""); // Número de adultos
+  const [children, setChildren] = useState(""); // Número de crianças acima de 6 anos
 
   // Opções do Dropdown
   const modality = [
@@ -198,27 +198,29 @@ export default function Reservation({ className }) {
                 />
               </div>
 
-              <div className="mb-1 desktop2:w-[95px]">
+              <div className="mb-1 w-[130px] desktop2:w-[150px]">
                 <label>Passageiros</label>
                 <input
                   type="number"
                   min="1"
                   value={adults}
-                  onChange={(e) => setAdults(e.target.value)}
-                  className="w-[100px] desktop2:w-[95px] h-[40px] font-mainFont bg-secondary/30 items-center text-center rounded-sm"
+                  placeholder="  Acima de 6 anos"
+                  onChange={(e) => setAdults(e.target.value || "")}
+                  className="w-[130px] desktop2:w-[150px] h-[40px] font-mainFont bg-secondary/30 items-center text-center rounded-sm"
                 />
               </div>
-              <div className="mb-1 w-[150px]">
+              <div className="mb-1 w-[130px] desktop2:w-[150px]">
                 <label>
-                  Crianças <br className="" />
-                  (acima de 6 anos)
+                  Crianças
                 </label>
                 <input
                   type="number"
                   min="0"
                   value={children}
-                  onChange={(e) => setChildren(e.target.value)}
-                  className="w-[150px] h-[40px] font-mainFont bg-secondary/30 items-center text-center rounded-sm"
+                  //dois (spaços para alinhas o texto do placeholder dentro do imput)
+                  placeholder="  Abaixo de 6 anos"
+                  onChange={(e) => setChildren(e.target.value || "")}
+                  className="w-[130px] desktop2:w-[150px] h-[40px] font-mainFont bg-secondary/30 items-center text-center rounded-sm"
                 />
               </div>
 
@@ -318,29 +320,29 @@ export default function Reservation({ className }) {
                 </div>
 
                 <div className="mb-1">
-                <label>Passageiros</label>
-                <input
-                  type="number"
-                  min="1"
-                  value={adults}
-                  onChange={(e) => setAdults(e.target.value)}
-                  className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center rounded-sm px-2"
-                />
-              </div>
-              <div className="mb-1">
-                <label>
-                  Crianças <br className="desktop2:hidden" />
-                  (acima de 6 anos)
-                </label>
-                <input
-                  type="number"
-                  min="0"
-                  value={children}
-                  onChange={(e) => setChildren(e.target.value)}
-                  className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center rounded-sm p-2"
-                />
-              </div>
-
+                  <label>Passageiros</label>
+                  <input
+                    type="number"
+                    placeholder="Acima de 6 anos"
+                    min="1"
+                    value={adults}
+                    onChange={(e) => setAdults(e.target.value || "")}
+                    className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center rounded-sm px-2"
+                  />
+                </div>
+                <div className="mb-1">
+                  <label>
+                    Crianças
+                  </label>
+                  <input
+                    type="number"
+                    min="0"
+                    value={children}
+                    placeholder="Abaixo de 6 anos"
+                    onChange={(e) => setChildren(e.target.value || "")}
+                    className="w-[228px] phone3:w-[239px] h-[40px] font-mainFont bg-secondary/30 items-center rounded-sm p-2"
+                  />
+                </div>
 
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <div className="flex flex-col items-center gap-4 m-auto">
