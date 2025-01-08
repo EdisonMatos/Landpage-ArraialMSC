@@ -13,6 +13,7 @@ import HowItWorksImage from "../components/sections/HowItWorksImage";
 import CtaMinimal from "../components/sections/CtaMinimal";
 import Depositions from "../components/sections/Depositions";
 import Reservation from "../components/sectionElements/Reservation";
+import WhatsChat from "../components/interactives/WhatsChat";
 
 export default function Index() {
   return (
@@ -29,6 +30,7 @@ export default function Index() {
       <Faq />
       <FooterSocial />
       <FloatingWhatsappButton />
+      <WhatsChat Chat={true}/>
       <BackToTopButton />
       <Reservation/>
     </div>
