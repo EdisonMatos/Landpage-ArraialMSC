@@ -180,10 +180,6 @@
 
 .custom-whatsapp-button {
   position: fixed;
-  z-index: 9999;
-  cursor: cursor-pointer;
-  bottom: 20px; /* Ajuste a posição */
-  right: 20px; /* Ajuste a posição */
 }
 
 ._tooltip_181xn_903,
@@ -196,7 +192,6 @@
   align-items: center !important; /* Alinha os itens no centro verticalmente */
   justify-content: flex-start !important; /* Alinha os itens no início horizontalmente */
   gap: 10px !important; /* Espaçamento horizontal entre os itens */
-  position: fixed !important;
   bottom: 80px !important; /* Ajuste conforme necessário */
   right: 20px !important;
 }
@@ -208,3 +203,20 @@
 }
 
 
+
+/* chat ou redirecionamento */
+.floating-chat {
+  position: relative;
+  display: inline-block;
+}
+
+/* Quando isChatEnabled é false, o botão age como um link */
+.whatsapp-redirect {
+  text-decoration: none;
+  pointer-events: all;
+}
+
+/* Oculta qualquer chatbox ou conteúdo adicional */
+.whatsapp-redirect .floating-chatbox {
+  display: none !important;
+}
