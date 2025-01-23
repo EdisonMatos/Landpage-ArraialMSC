@@ -30,7 +30,7 @@ export default function Index() {
       <Faq />
       <FooterSocial />
       {/* <FloatingWhatsappButton /> */}
-      <WhatsChat Chat={false}/>
+      <WhatsChat Chat={true}/>
       <BackToTopButton />
       <Reservation/>
     </div>

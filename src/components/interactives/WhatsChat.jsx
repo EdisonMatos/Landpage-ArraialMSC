@@ -13,12 +13,14 @@ export default function WhatsChat({ Chat }) {
   const [isVisible, setIsVisible] = useState(
     localStorage.getItem("chatVisible") === "true"
   );
+  const [showNotification, setShowNotification] = useState(true);
+  const [resetMessage, setResetMessage] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
-      // Torna o chat visível se o usuário rolar mais de 100px
+      // Torna o ícone visível após rolar a tela
       setIsVisible(scrollTop > 100);
     };
 
@@ -30,18 +32,18 @@ export default function WhatsChat({ Chat }) {
   }, []);
 
   useEffect(() => {
-    // Salva o estado do chat no localStorage
+    // Salva o estado do componente no localStorage
     localStorage.setItem("chatVisible", isVisible);
   }, [isVisible]);
 
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === "visible") {
-        // Reaparece a mensagem e a notificação após 3 segundos quando o usuário retorna à página
-        const showNotificationTimeout = setTimeout(() => {
-          setIsVisible(true);
-        }, 3000);
-        return () => clearTimeout(showNotificationTimeout);
+        // Reexibe a notificação e a mensagem "WhatsApp" ao retornar à página
+        setShowNotification(false); // Reseta a notificação
+        setTimeout(() => setShowNotification(true), 0); // Reativa a notificação imediatamente
+        setResetMessage(true); // Força o reset da mensagem inicial
+        setTimeout(() => setResetMessage(false), 0); // Reativa a mensagem inicial
       }
     };
 
@@ -67,13 +69,17 @@ export default function WhatsChat({ Chat }) {
             status="w-3"
             chatboxHeight="auto"
             phoneNumber={whatsNumber}
-            notification={true}
+            notification={showNotification}
             notificationDelay={2}
             notificationLoop={2}
             accountName={infos.name}
             avatar={imgProfilePicture}
-            initialMessageByServer={infos.whatsChatDefaultMessage}
-            initialMessageByClient={infos.whatsappDefaultMessage}
+            initialMessageByServer={
+              resetMessage ? "" : infos.whatsChatDefaultMessage
+            } // Controla o reset da mensagem inicial
+            initialMessageByClient={
+              resetMessage ? "" : infos.whatsappDefaultMessage
+            }
             statusMessage="Disponível"
             startChatText="Falar no whatsapp"
             tooltipText={
@@ -95,6 +101,9 @@ export default function WhatsChat({ Chat }) {
           <FloatingWhatsApp
             phoneNumber={whatsappContactLink}
             accountName="Arraial"
+            notification={showNotification}
+            notificationDelay={2}
+            notificationLoop={2}
             tooltipText={
               <p ref={tooltipTextRef} className="_tooltip_181xn_903">
                 WhatsApp
