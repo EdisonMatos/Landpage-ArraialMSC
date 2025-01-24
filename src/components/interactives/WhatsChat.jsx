@@ -82,11 +82,6 @@ export default function WhatsChat({ Chat }) {
             }
             statusMessage="Disponível"
             startChatText="Falar no whatsapp"
-            tooltipText={
-              <p ref={tooltipTextRef} className="_tooltip_181xn_903">
-                WhatsApp
-              </p>
-            }
             allowEsc={true}
             onClose={handleCloseChat} // Aciona ao fechar o chat
           />
@@ -104,11 +99,6 @@ export default function WhatsChat({ Chat }) {
             notification={showNotification}
             notificationDelay={2}
             notificationLoop={2}
-            tooltipText={
-              <p ref={tooltipTextRef} className="_tooltip_181xn_903">
-                WhatsApp
-              </p>
-            }
             chatboxHeight={0}
           />
         </a>
