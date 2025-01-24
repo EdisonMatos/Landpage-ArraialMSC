@@ -22,7 +22,7 @@ export default function AboutInstagram() {
 
   return (
     <SectionArea id="about" className="colortop-bottom" paddingbot={false}>
-      <SectionWrapper className="flex flex-col desktop1:flex-row gap-[40px]  desktop1:gap-x-[40px]  desktop1:justify-between">
+      <SectionWrapper className="flex flex-col desktop1:flex-row gap-[40px] desktop1:gap-x-[40px] desktop1:justify-between">
         <MotionDivDownToUp className="relative w-[100%] desktop1:w-[415px] desktop2:w-[485px] flex justify-center">
           {/* <img
             src={imgPhone}
