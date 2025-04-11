@@ -26,16 +26,13 @@ export default function HeroBgImg() {
       <p>
         <div class="text-paragraph5 font-bold mb-4">🛳️ ROTEIRO:</div>
         <ul class="list-disc list-inside space-y-2 text-paragraph3">
-          <li>
-            Prainhas do Pontal do Atalaia: Gruta do Amor e a escadaria (⏱️
-            Desembarque de 40 min)
-          </li>
-          <li>Ilha do Farol (⏱️ Desembarque de 20 min)</li>
+          <li>Ilha do Farol (⏱ Desembarque de 20 min)</li>
+          <li>Guriri (⏱ Parada de mergulho 20 a 30 min)</li>
           <li>Fenda de Nossa Senhora (👀 Passagem panorâmica)</li>
           <li>Perfil do Gorila (👀 Passagem panorâmica)</li>
           <li>Gruta Azul (👀 Passagem panorâmica)</li>
           <li>Impacto do Meteorito (👀 Passagem panorâmica)</li>
-          <li>Praia do Forno (⏱️ Parada na enseada por 15 min)</li>
+          <li>Praia do Forno (⏱ Parada na enseada por 15 min)</li>
         </ul>
 
         <div class="text-paragraph5 font-bold mt-8 mb-4">
