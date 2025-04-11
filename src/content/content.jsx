@@ -128,8 +128,7 @@ const content = {
           Somos uma equipe apaixonada por Arraial do Cabo, o Caribe Brasileiro.
           Oferecemos experiências únicas para explorar as maravilhas naturais
           deste paraíso. Nossos passeios de barco levam você a praias icônicas
-          como a Praia da Ilha do Farol, a Praia do Forno e as Prainhas do
-          Pontal do Atalaia.
+          como a Praia da Ilha do Farol e a Praia do Forno.
           <br />
           <br />
           Nosso objetivo é proporcionar momentos inesquecíveis, navegando por
