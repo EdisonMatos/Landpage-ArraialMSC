@@ -12,9 +12,6 @@ import AboutInstagram from "../components/sections/AboutInstagram";
 import HowItWorksImage from "../components/sections/HowItWorksImage";
 import CtaMinimal from "../components/sections/CtaMinimal";
 import Depositions from "../components/sections/Depositions";
-import Reservation from "../components/sectionElements/Reservation";
-import WhatsChat from "../components/interactives/WhatsChat";
-import BotExternoArraial from "../components/interactives/BotExternoArraial";
 
 export default function Index() {
   return (
@@ -32,7 +29,7 @@ export default function Index() {
       <FooterSocial />
       {/* <FloatingWhatsappButton /> */}
       {/* <WhatsChat Chat={false} /> */}
-      <BotExternoArraial />
+
       <BackToTopButton />
       {/* <Reservation/> */}
     </div>
