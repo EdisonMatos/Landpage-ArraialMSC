@@ -51,15 +51,16 @@ const content = {
       ctaButtonTextResponsive: "Contato",
     },
     hero: {
-      miniTag: "PASSEIO DE BARCO EM ARRAIAL DO CABO - RJ",
+      miniTag: "Experiências autênticas em Arraial do Cabo – RJ",
       title: (
         <h1 className="mb-[16px]">
-          Descubra Arraial de uma maneira única e inesquecível
+          Mais do que um passeio de barco. <br />
+          Uma lembrança que vai te acompanhar pra sempre.
         </h1>
       ),
       subtitle:
-        "Uma experiência extraordinária para aproveitar o melhor do Caribe Brasileiro",
-      ctaButtonText: "Agende seu passeio",
+        "Navegue pelas águas mais cristalinas do Brasil com quem conhece cada canto de Arraial do Cabo — e transforma o seu dia no mar em uma experiência leve, segura e inesquecível.",
+      ctaButtonText: "Quero viver essa experiência",
       ctaButtonAriaLabel:
         "Botão para chamada de ação para contato pelo whatsapp",
       secondaryCta: "Quer saber mais? Clique aqui",
@@ -125,16 +126,22 @@ const content = {
       subtitle: "",
       paragraph: (
         <div>
-          Somos uma equipe apaixonada por Arraial do Cabo, o Caribe Brasileiro.
-          Oferecemos experiências únicas para explorar as maravilhas naturais
-          deste paraíso. Nossos passeios de barco levam você a praias icônicas
-          como a Praia da Ilha do Farol e a Praia do Forno.
+          A gente é movido pelo mesmo encanto que faz tanta gente se apaixonar
+          por Arraial do Cabo.
           <br />
           <br />
-          Nosso objetivo é proporcionar momentos inesquecíveis, navegando por
-          águas cristalinas e admirando a vida marinha. Com compromisso e
-          excelência, garantimos que cada passeio seja uma jornada mágica. Venha
-          viver a magia de Arraial do Cabo conosco!
+          Somos uma equipe local, que cresceu com o pé na areia e o coração no
+          mar — e que decidiu transformar essa paixão em experiência pra quem
+          visita esse paraíso.
+          <br />
+          <br />
+          Nossos passeios te levam a lugares que a maioria só vê em foto: Ilha
+          do Farol, Praia do Forno, Prainhas do Pontal do Atalaia…
+          <br />
+          <br />
+          Mas o que faz diferença não é o roteiro — é o cuidado em cada detalhe.
+          A gente quer que você volte pra casa com a sensação de ter vivido um
+          dia leve, bonito e inesquecível.
         </div>
       ),
       aboutSocial: {
@@ -142,17 +149,18 @@ const content = {
           img: aboutSocialImg,
           alt: "Foto Profissional",
         },
-        miniTag: "REDES SOCIAIS",
+        miniTag: "FIQUE POR DENTRO",
         title: "Siga a gente nas redes sociais",
         subtitle: "",
         paragraph: (
           <p>
-            🏝️ Quer saber mais sobre viagens incríveis? Siga nossa agência de
-            turismo nas redes sociais!
+            🌊 Quer sentir o clima de Arraial mesmo antes de embarcar? Acompanhe
+            nossa página e descubra os bastidores dos passeios, dicas de viagem
+            e os lugares mais incríveis que você precisa conhecer.
             <br />
             <br />
-            Não perca a chance de ficar por dentro das novidades e dicas para
-            suas próximas aventuras.
+            Vem fazer parte da nossa trip e viva a experiência de Arraial do
+            Cabo todos os dias com a gente!
           </p>
         ),
       },
@@ -423,16 +431,17 @@ const content = {
       },
     },
     features: {
-      miniTag: "PASSEIO DE BARCO",
-      title: "Descubra as maravilhas deste lugar paradisíaco",
+      miniTag: "Aventura única em Arraial do Cabo",
+      title:
+        "Descubra o que torna Arraial do Cabo tão especial — do jeito certo de viver o mar.",
       subtitle:
-        "Muita diversão e alegria na atividade turística mais requisitada em Arraial do Cabo",
+        "Embarque em um passeio que une aventura, conforto e paisagens que parecem de outro mundo. Tudo isso com uma equipe que entende o mar e cuida de cada detalhe pra sua experiência ser perfeita do início ao fim.",
       imgFeatures: imgFeatures,
       imgDivisor: imgDivisor,
       card1: {
         title: "Águas Cristalinas",
         subtitle:
-          "Navegue por águas que parecem cristal, perfeita para admirar a vida marinha e os encantos subaquáticos.",
+          "Navegue por águas tão transparentes que você enxerga o fundo do mar — e entende por que chamam Arraial de “Caribe Brasileiro”.",
         img: featuresImg1,
         buttonLabel: "Saiba mais",
         buttonLink: `${links.whatsapp}Olá! Vim através do site e gostaria de saber sobre sites.`,
@@ -440,7 +449,7 @@ const content = {
       card2: {
         title: "Praias Paradisíacas",
         subtitle:
-          "Explore praias famosas, com areia branca e águas turquesas, com vistas deslumbrantes.",
+          "Areia branca, mar turquesa e um visual que nenhuma foto consegue traduzir. A gente te leva até os pontos mais bonitos e tranquilos da região.",
         img: featuresImg2,
         buttonLabel: "Saiba mais",
         buttonLink: `${links.whatsapp}Olá! Vim através do site e gostaria de saber sobre landing pages.`,
@@ -448,7 +457,7 @@ const content = {
       card3: {
         title: "Vida Marinha",
         subtitle:
-          "Capture momentos inesquecíveis com vistas panorâmicas deslumbrantes.",
+          "Mergulhe com tartarugas, cardumes e estrelas-do-mar que parecem saídas de um documentário. Cada parada é um novo cenário pra você viver — e registrar.",
         img: featuresImg3,
         buttonLabel: "Saiba mais",
         buttonLink: `${links.whatsapp}Olá! Vim através do site e gostaria de saber sobre landing pages.`,
@@ -456,14 +465,15 @@ const content = {
       card4: {
         title: "Conforto a Bordo",
         subtitle:
-          "Desfrute de uma embarcação equipada com áreas sombreadas e ao ar livre, som ambiente.",
+          "Nosso barco foi pensado pra você relaxar. Tem sombra, área aberta, som ambiente e o cuidado que transforma um simples passeio em um dia inesquecível.",
         img: featuresImg4,
         buttonLabel: "Saiba mais",
         buttonLink: `${links.whatsapp}Olá! Vim através do site e gostaria de saber sobre landing pages.`,
       },
     },
     steps: {
-      miniTag: "SEM COMPLICAÇÕES",
+      miniTag:
+        "Tudo simples e tranquilo — do jeito que uma boa experiência deve ser.",
       title: "Como funciona nosso passeio?",
       subtitle: "empty",
       imgSteps: imgSteps,
@@ -471,26 +481,50 @@ const content = {
         card1: {
           stepNumber: 1,
           cardTitle: "Horários",
-          cardDescription:
-            "Passeios diários com saídas das 9h às 14h. Recomendamos chegar com pelo menos 30 minutos de antecedência.",
+          cardDescription: (
+            <p>
+              Saídas diárias, das <strong>9h às 14h</strong>. <br />
+              Chegue com 30 minutinhos de antecedência e já comece o dia
+              respirando o ar do cais — o resto a gente cuida.
+            </p>
+          ),
         },
         card2: {
           stepNumber: 2,
           cardTitle: "Duração",
-          cardDescription:
-            "São 4 horas intensas de puro encanto e diversão, onde você desfruta de todo conforto à bordo e da experiência única da paisagem.",
+          cardDescription: (
+            <p>
+              São{" "}
+              <strong>
+                4 horas de mar, sol e paisagens que não saem da cabeça
+              </strong>
+              . <br />
+              Tempo ideal pra viver tudo, com conforto e sem pressa.
+            </p>
+          ),
         },
         card3: {
           stepNumber: 3,
           cardTitle: "O que levar?",
-          cardDescription:
-            "Protetor solar, chapéu ou boné, toalha, roupa de banho, e uma câmera para registrar cada momento especial.",
+          cardDescription: (
+            <p>
+              Só o essencial:{" "}
+              <strong>protetor, chapéu, toalha e roupa de banho</strong>. <br />
+              E claro — uma câmera ou celular pra registrar cada momento (você
+              vai querer lembrar disso depois).
+            </p>
+          ),
         },
         card4: {
           stepNumber: 4,
           cardTitle: "Segurança",
-          cardDescription:
-            "Seguimos todos os protocolos de segurança e oferecemos coletes salva-vidas para todos os passageiros.",
+          cardDescription: (
+            <p>
+              Todo mundo embarca com <strong>colete salva-vidas</strong> e a
+              tripulação segue rigorosamente os protocolos. <br />
+              Segurança e tranquilidade vêm em primeiro lugar — sempre.
+            </p>
+          ),
         },
       },
     },
@@ -498,9 +532,15 @@ const content = {
       backgroundImg: ctaWhatsappImgBg,
       miniTag: "CONTATE AGORA",
       title: "Pronto para sua próxima aventura?",
-      subtitle:
-        "Entre em contato agora e comece a planejar uma experiência inesquecível em Arraial do Cabo!",
-      ctaButtonText: "Fale Conosco no WhatsApp",
+      subtitle: (
+        <p>
+          Garanta seu passeio e descubra por que Arraial do Cabo é chamado de o
+          Caribe Brasileiro. <br />
+          Entre em contato agora e prepare-se para uma experiência que você vai
+          querer repetir!
+        </p>
+      ),
+      ctaButtonText: "Fale com a gente no WhatsApp",
     },
     testimonials: {
       miniTag: "FEEDBACKS REAIS",

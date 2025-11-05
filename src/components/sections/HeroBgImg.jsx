@@ -144,7 +144,7 @@ export default function HeroBgImg() {
             <div className=" flex flex-col w-full desktop1:w-[60%] desktop1:mr-[20px]">
               <MotionDivDownToUp>
                 <div className="w-auto text-center font-secondFont phone1:text-paragraph4">
-                  <p className="mb-[16px] bg-black bg-opacity-50 text-lighter rounded-2xl px-[16px] py-[6px] inline-block text-paragraph2">
+                  <p className="mb-[16px] bg-black bg-opacity-50 text-lighter rounded-2xl px-[16px] py-[6px] inline-block text-paragraph2 uppercase">
                     {content.texts.hero.miniTag}
                   </p>
                 </div>

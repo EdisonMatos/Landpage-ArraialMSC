@@ -14,10 +14,15 @@ const infos = {
         Das 9h às 20h30
       </p>
     ),
-    midSectionName: "Até mais! 😉",
+    midSectionName: "Até breve, viajante! 🌊",
     year: 2024,
-    footerText:
-      "Obrigado por nos visitar! Esperamos que em breve você se junte a nós para explorar todas as maravilhas que temos a oferecer.",
+    footerText: (
+      <p>
+        Foi um prazer ter você por aqui. <br />
+        Quando quiser transformar seus dias em lembranças inesquecíveis, nosso
+        barco estará te esperando em Arraial do Cabo. ⚓
+      </p>
+    ),
   },
 };
 

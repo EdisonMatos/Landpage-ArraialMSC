@@ -115,7 +115,7 @@ function FooterSocial() {
         </div>
         <div className="flex flex-col gap-y-[16px] desktop1:w-[290px]">
           <MotionDivDownToUp>
-            <h1 className="font-medium text-lighter font-mainFont text-title2 desktop1:text-title5 desktop1:h-[115px] flex items-center">
+            <h1 className="font-medium text-lighter font-mainFont text-title2 desktop1:text-title5 desktop1:h-[115px] flex items-center leading-[40px]">
               {infos.footerInfos.midSectionName}
             </h1>
           </MotionDivDownToUp>
