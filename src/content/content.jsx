@@ -535,7 +535,7 @@ const content = {
       subtitle: (
         <p>
           Garanta seu passeio e descubra por que Arraial do Cabo é chamado de o
-          Caribe Brasileiro. <br />
+          <i> Caribe Brasileiro</i>. <br />
           Entre em contato agora e prepare-se para uma experiência que você vai
           querer repetir!
         </p>
