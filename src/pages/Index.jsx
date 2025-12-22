@@ -1,17 +1,20 @@
-import Faq from "../components/sections/Faq";
-import About from "../components/sections/About";
-import BackToTopButton from "../components/interactives/BackToTopButton";
-import FloatingWhatsappButton from "../components/interactives/FloatingWhatsappButton";
-import HeroBgImg from "../components/sections/HeroBgImg";
-import FooterSocial from "../components/sections/FooterSocial";
-import NavbarSocial from "../components/sections/NavbarSocial";
-import HowItWorks from "../components/sections/HowItWorks";
-import FeaturesWithIcons from "../components/sections/FeaturesWithIcons";
-import Numbers from "../components/sections/Numbers";
-import AboutInstagram from "../components/sections/AboutInstagram";
-import HowItWorksImage from "../components/sections/HowItWorksImage";
-import CtaMinimal from "../components/sections/CtaMinimal";
-import Depositions from "../components/sections/Depositions";
+import Faq from '../components/sections/Faq'
+import About from '../components/sections/About'
+import BackToTopButton from '../components/interactives/BackToTopButton'
+import FloatingWhatsappButton from '../components/interactives/FloatingWhatsappButton'
+import HeroBgImg from '../components/sections/HeroBgImg'
+import FooterSocial from '../components/sections/FooterSocial'
+import NavbarSocial from '../components/sections/NavbarSocial'
+import HowItWorks from '../components/sections/HowItWorks'
+import FeaturesWithIcons from '../components/sections/FeaturesWithIcons'
+import Numbers from '../components/sections/Numbers'
+import AboutInstagram from '../components/sections/AboutInstagram'
+import HowItWorksImage from '../components/sections/HowItWorksImage'
+import CtaMinimal from '../components/sections/CtaMinimal'
+import Depositions from '../components/sections/Depositions'
+import CheckoutWidget from '../components/sectionElements/CheckoutWidget'
+import CheckoutWidgetHorizontal from '../components/sectionElements/CheckoutWidgetHorizontal'
+import CheckoutWidgetButton from '../components/sectionElements/CheckoutWidgetButton'
 
 export default function Index() {
   return (
@@ -30,8 +33,11 @@ export default function Index() {
       {/* <FloatingWhatsappButton /> */}
       {/* <WhatsChat Chat={false} /> */}
 
-      <BackToTopButton />
+      {/* <BackToTopButton /> */}
       {/* <Reservation/> */}
+
+      <CheckoutWidget />
+      <CheckoutWidgetButton />
     </div>
-  );
+  )
 }
