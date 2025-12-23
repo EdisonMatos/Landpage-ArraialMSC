@@ -36,7 +36,6 @@ export default function Index() {
       {/* <BackToTopButton /> */}
       {/* <Reservation/> */}
 
-      <CheckoutWidget />
       <CheckoutWidgetButton />
     </div>
   )
