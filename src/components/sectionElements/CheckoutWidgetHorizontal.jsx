@@ -21,11 +21,12 @@ function CheckoutWidgetHorizontal() {
         style={{
           display: 'flex',
           gap: '12px',
-          alignItems: 'flex-end',
+          alignItems: 'stretch', // 🔥 NÃO usar flex-end aqui
           width: '100%',
           flexWrap: 'wrap',
         }}
       >
+        {/* DATA */}
         <div style={{ flex: 1, minWidth: '150px' }}>
           <label
             style={{
@@ -49,11 +50,17 @@ function CheckoutWidgetHorizontal() {
               borderRadius: '8px',
               fontSize: '14px',
               boxSizing: 'border-box',
+
+              // ✅ FIX SAFARI iOS
+              minHeight: '44px',
+              lineHeight: 'normal',
+              WebkitAppearance: 'textfield',
             }}
           />
         </div>
 
-        <div style={{ flex: 1, minWidth: '80px' }}>
+        {/* ADULTOS */}
+        <div style={{ flex: 1, minWidth: '80px', alignSelf: 'flex-end' }}>
           <label
             style={{
               display: 'block',
@@ -82,7 +89,8 @@ function CheckoutWidgetHorizontal() {
           />
         </div>
 
-        <div style={{ flex: 1, minWidth: '80px' }}>
+        {/* CRIANÇAS */}
+        <div style={{ flex: 1, minWidth: '80px', alignSelf: 'flex-end' }}>
           <label
             style={{
               display: 'block',
@@ -111,9 +119,11 @@ function CheckoutWidgetHorizontal() {
           />
         </div>
 
+        {/* BOTÃO */}
         <button
           type="submit"
           style={{
+            alignSelf: 'flex-end', // 🔥 flex-end isolado
             backgroundColor: '#0ea5e9',
             fontSize: '13px',
             color: 'white',
