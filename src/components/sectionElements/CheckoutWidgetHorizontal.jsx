@@ -21,7 +21,7 @@ function CheckoutWidgetHorizontal() {
         style={{
           display: 'flex',
           gap: '12px',
-          alignItems: 'stretch', // 🔥 NÃO usar flex-end aqui
+          alignItems: 'stretch',
           width: '100%',
           flexWrap: 'wrap',
         }}
@@ -123,7 +123,7 @@ function CheckoutWidgetHorizontal() {
         <button
           type="submit"
           style={{
-            alignSelf: 'flex-end', // 🔥 flex-end isolado
+            alignSelf: 'flex-end',
             backgroundColor: '#0ea5e9',
             fontSize: '13px',
             color: 'white',
@@ -145,3 +145,4 @@ function CheckoutWidgetHorizontal() {
 }
 
 export default CheckoutWidgetHorizontal
+//teste
