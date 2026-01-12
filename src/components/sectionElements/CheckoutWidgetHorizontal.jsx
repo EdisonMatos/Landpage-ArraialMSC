@@ -2,7 +2,27 @@ import React from 'react'
 
 function CheckoutWidgetHorizontal() {
   //Data definida para ios
-  const today = new Date().toISOString().split('T')[0]
+  const isSafari = () =>
+    typeof navigator !== 'undefined' &&
+    /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+
+  const getTomorrowISO = () => {
+    const now = new Date()
+
+    if (isSafari()) {
+      return new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)
+        .toISOString()
+        .split('T')[0]
+    }
+
+    return new Date(new Date().setDate(now.getDate() + 1))
+      .toISOString()
+      .split('T')[0]
+  }
+
+  const today = getTomorrowISO()
+
+  console.log('amanha:', getTomorrowISO())
 
   //Captura apenas dispositivos ios
   const isIOS = () =>
@@ -11,6 +31,7 @@ function CheckoutWidgetHorizontal() {
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))
 
   const ios = isIOS()
+  const safari = isSafari()
 
   return (
     <div
@@ -53,7 +74,7 @@ function CheckoutWidgetHorizontal() {
           <input
             type="date"
             name="date"
-            {...(ios ? { defaultValue: today } : {})}
+            {...(ios || safari ? { defaultValue: today } : {})}
             required
             style={{
               width: '100%',
