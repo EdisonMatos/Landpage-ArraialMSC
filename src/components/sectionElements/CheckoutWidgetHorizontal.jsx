@@ -62,15 +62,10 @@ function CheckoutWidgetHorizontal() {
               fontSize: '16px',
               minHeight: '44px',
               boxSizing: 'border-box',
-
               appearance: 'none',
               WebkitAppearance: 'none',
-
-              color: '#111827',
               backgroundColor: '#fff',
               lineHeight: '1.25',
-
-              WebkitTextFillColor: '#111827',
               opacity: 1,
             }}
           />
