@@ -1,6 +1,16 @@
 import React from 'react'
 
 function CheckoutWidgetHorizontal() {
+  //Data definida para ios
+  const today = new Date().toISOString().split('T')[0]
+
+  //Captura apenas dispositivos ios
+  const isIOS = () =>
+    typeof navigator !== 'undefined' &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent)
+
+  const ios = isIOS()
+
   return (
     <div
       id="arraial-widget-horizontal"
@@ -42,19 +52,26 @@ function CheckoutWidgetHorizontal() {
           <input
             type="date"
             name="date"
+            {...(ios ? { defaultValue: today } : {})}
             required
             style={{
               width: '100%',
               padding: '8px 12px',
               border: '1px solid #d1d5db',
               borderRadius: '8px',
-              fontSize: '14px',
+              fontSize: '16px',
+              minHeight: '44px',
               boxSizing: 'border-box',
 
-              // ✅ FIX SAFARI iOS
-              minHeight: '44px',
-              lineHeight: 'normal',
-              WebkitAppearance: 'textfield',
+              appearance: 'none',
+              WebkitAppearance: 'none',
+
+              color: '#111827',
+              backgroundColor: '#fff',
+              lineHeight: '1.25',
+
+              WebkitTextFillColor: '#111827',
+              opacity: 1,
             }}
           />
         </div>
