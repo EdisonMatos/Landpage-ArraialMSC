@@ -7,7 +7,8 @@ function CheckoutWidgetHorizontal() {
   //Captura apenas dispositivos ios
   const isIOS = () =>
     typeof navigator !== 'undefined' &&
-    /iPad|iPhone|iPod/.test(navigator.userAgent)
+    (/iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))
 
   const ios = isIOS()
 
@@ -37,7 +38,7 @@ function CheckoutWidgetHorizontal() {
         }}
       >
         {/* DATA */}
-        <div style={{ flex: 1, minWidth: '150px' }}>
+        <div style={{ flex: 1, minWidth: '200px' }}>
           <label
             style={{
               display: 'block',
@@ -72,7 +73,14 @@ function CheckoutWidgetHorizontal() {
         </div>
 
         {/* ADULTOS */}
-        <div style={{ flex: 1, minWidth: '80px', alignSelf: 'flex-end' }}>
+        <div
+          style={{
+            flex: 1,
+
+            ...(ios ? { minWidth: '100px' } : { minWidth: '80px' }),
+            alignSelf: 'flex-end',
+          }}
+        >
           <label
             style={{
               display: 'block',
