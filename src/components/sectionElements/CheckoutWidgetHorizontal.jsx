@@ -76,7 +76,8 @@ function CheckoutWidgetHorizontal() {
         <div
           style={{
             flex: 1,
-            minWidth: '80px',
+
+            ...(ios ? { minWidth: '100px' } : { minWidth: '80px' }),
             alignSelf: 'flex-end',
           }}
         >
@@ -142,7 +143,7 @@ function CheckoutWidgetHorizontal() {
         <button
           type="submit"
           style={{
-            ...(ios ? { margin: '0 auto' } : { alignSelf: 'flex-end' }),
+            alignSelf: 'flex-end',
             backgroundColor: '#0ea5e9',
             fontSize: '13px',
             color: 'white',
